@@ -10,7 +10,7 @@ In these unprecedented times, our instructors have decided to give us a HACKATHO
 |---|---|---|
 | Brian Duong |A01059237 | bduong4 |
 | Hans Sy | A00892259 | hanssy130 |
-| Jason Lui | | jason-lui |
+| Jason Lui | A00930386 | jason-lui |
 | Justin Majam | A01166240 | jmajam |
 
 ## About
