@@ -27,17 +27,13 @@ When combined, the characters “干吗?(gànmá?)” can generally take on two 
 
 ### Examples:
 
-1) 
-
-Nǐ zài gànmá?
+1) Nǐ zài gànmá?
 
 你  在 干吗？
 
 What are you doing?
 
-2) 
-
-Zhèshì wǒde diànnǎo, nǐxiǎng gànmá?
+2) Zhèshì wǒde diànnǎo, nǐxiǎng gànmá?
 
 这是    我的   电脑，    你想     干吗？
 
