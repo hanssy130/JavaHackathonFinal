@@ -11,7 +11,7 @@ In these unprecedented times, our instructors have decided to give us a HACKATHO
 | Brian Duong |A01059237 | bduong4 |
 | Hans Sy | A00892259 | hanssy130 |
 | Jason Lui | | jason-lui |
-| Justin Majam | | jmajam |
+| Justin Majam |A01166240 | jmajam |
 
 ## About
 We chose this team name because we enjoyed saying it around each other. Read the below for a 
