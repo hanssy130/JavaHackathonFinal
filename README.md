@@ -25,8 +25,6 @@ From [https://www.echineselearning.com/blog/what-are-you-doing-using-the-phrase-
 
 When combined, the characters “干吗?(gànmá?)” can generally take on two meanings. The first usage of “干吗?(gànmá?)” is relatively straightforward, as you might guess from the direct translation of the two characters. It can be used to ask about what someone is doing at the moment or what he or she wants to do.
 
-### Examples:
-
 | Example 1 | Example 2 |
 | --- | --- |
 | Nǐ zài gànmá? | Zhèshì wǒde diànnǎo, nǐxiǎng gànmá? |
