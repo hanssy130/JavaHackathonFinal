@@ -11,7 +11,7 @@ In these unprecedented times, our instructors have decided to give us a HACKATHO
 | Brian Duong |A01059237 | bduong4 |
 | Hans Sy | A00892259 | hanssy130 |
 | Jason Lui | | jason-lui |
-| Justin Majam |A01166240 | jmajam |
+| Justin Majam | A01166240 | jmajam |
 
 ## About
 We chose this team name because we enjoyed saying it around each other. Read the below for a 
@@ -27,15 +27,12 @@ When combined, the characters “干吗?(gànmá?)” can generally take on two 
 
 ### Examples:
 
-1) Nǐ zài gànmá?
+| Example 1 | Example 2 |
+| --- | --- |
+| Nǐ zài gànmá? | Zhèshì wǒde diànnǎo, nǐxiǎng gànmá? |
+| 你  在 干吗？ | 这是    我的   电脑，    你想     干吗？|
+| What are you doing? | This is my computer, what do you want to do with it? |
 
-你  在 干吗？
 
-What are you doing?
 
-2) Zhèshì wǒde diànnǎo, nǐxiǎng gànmá?
-
-这是    我的   电脑，    你想     干吗？
-
-This is my computer, what do you want to do with it?
 
