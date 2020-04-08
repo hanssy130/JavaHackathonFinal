@@ -14,7 +14,7 @@ In these unprecedented times, our instructors have decided to give us a HACKATHO
 | Justin Majam | A01166240 | jmajam |
 
 ## About
-We chose this team name because we enjoyed saying it around each other. Read the below for a 
+We chose this team name because we enjoyed saying it around each other.
 
 The Mandarin expression《干嘛》(pinyin: gàn má) is a colloquial phrase that's used very commonly.
 It is used to ask "What're you doing?"
