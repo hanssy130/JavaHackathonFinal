@@ -8,7 +8,7 @@ In these unprecedented times, our instructors have decided to give us a HACKATHO
 ## Team Roster
 | Name | Student ID | GitHub ID |
 |---|---|---|
-| Brian Duong | | bduong4 |
+| Brian Duong |A01059237 | bduong4 |
 | Hans Sy | A00892259 | hanssy130 |
 | Jason Lui | | jason-lui |
 | Justin Majam | | jmajam |
