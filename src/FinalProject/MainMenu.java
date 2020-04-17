@@ -24,15 +24,23 @@ public class MainMenu extends Stage {
         // Spacing from window border to actual layout is 10px every side.
         layoutMainMenu.setPadding(new Insets(10));
 
-        // Button to go to scene with buttons to time lines
+        Button buttonIntroductions = new Button("Go to timelines");
+        buttonIntroductions.setOnAction(actionEvent -> {
+            new Introduction().introductionStage();
+            this.close();
+        });
+
+        // Button to go to scene with buttons to timelines
         Button buttonTimelines = new Button("Go to timelines");
         buttonTimelines.setOnAction(actionEvent -> {
             new TimelineMenu().timeLineStage();
             this.close();
         });
 
+
+
         HBox menuBottomMainMenu = new HBox();
-        menuBottomMainMenu.getChildren().addAll(buttonTimelines);
+        menuBottomMainMenu.getChildren().addAll(buttonIntroductions, buttonTimelines);
 
         layoutMainMenu.setBottom(menuBottomMainMenu);
 
@@ -54,7 +62,7 @@ public class MainMenu extends Stage {
         VBox centerText = new VBox();
         Text introduction = new Text();
         introduction.setText("How Taiwan Contained an Epidemic Virus Better Than the Rest");
-        introduction.setFont(new Font(30));
+        introduction.setFont(new Font(16));
 
         centerText.getChildren().add(introduction);
         centerText.setAlignment(Pos.TOP_CENTER);
