@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class MainMenu extends Application {
@@ -53,18 +54,18 @@ public class MainMenu extends Application {
         layoutMainMenu.setTop(menuTop);
 
 
+
+        VBox centerText = new VBox();
+        Text introduction = new Text();
+        introduction.setText("This is sample Covid-19 text");
+        introduction.setFont(new Font(30));
+
+        centerText.getChildren().add(introduction);
+        centerText.setAlignment(Pos.TOP_CENTER);
+        layoutMainMenu.setCenter(centerText);
+
+
         Scene sceneMain = new Scene(layoutMainMenu, 800, 600);
-
-        BorderPane layoutButtons = new BorderPane();
-        layoutButtons.setPadding(new Insets(10));
-
-        /*
-        The different buttons that will appear on the second scene
-         */
-
-
-        
-
 
         primaryStage.setTitle("Main Menu");
         primaryStage.setScene(sceneMain);
