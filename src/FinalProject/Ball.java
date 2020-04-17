@@ -32,6 +32,7 @@ public class Ball extends Circle implements Runnable {
     private double dy; // change in vertical position of ball
     private boolean immune;
     private boolean infected;
+    private int daysInfected;
 
     /**
      * Constructs an object of type Ball.
@@ -45,14 +46,10 @@ public class Ball extends Circle implements Runnable {
         this.setCenterY(yPosition);
         this.dx = (MAX_HORIZONTAL_SPEED - 1) * GENERATOR.nextDouble() + 1; // change in x
         this.dy = (MAX_VERTICAL_SPEED - 1) * GENERATOR.nextDouble() + 1; // change in y
-        this.infected = infected;
         this.immune = false;
-
-        if (infected) {
-            this.setFill(INFECTED_COLOR);
-        } else {
-            this.setFill(UNINFECTED_COLOR);
-        }
+        this.infected = infected;
+        this.daysInfected = 0;
+        this.setFill(infected ? INFECTED_COLOR : UNINFECTED_COLOR);
     }
 
     /*
@@ -110,6 +107,7 @@ public class Ball extends Circle implements Runnable {
             }
 
             collision();
+//            incrementDaysInfectedAndKillOrRecoverBalls();
 
             /* Long-running operations must not be run on the JavaFX application
                thread, since this prevents JavaFX from updating the UI, resulting
