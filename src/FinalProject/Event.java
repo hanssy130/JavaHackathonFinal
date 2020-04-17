@@ -1,6 +1,8 @@
 package FinalProject;
 
 import javafx.scene.Group;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 public class Event extends Group {
@@ -12,7 +14,10 @@ public class Event extends Group {
         this.date = date;
         this.description = description;
 
-        Text something = new Text(description);
-        getChildren().addAll(something);
+        Text eventDate = new Text(date);
+        Text eventDescription = new Text(description);
+        VBox stackPane = new VBox(eventDate, eventDescription);
+
+        getChildren().addAll(stackPane);
     }
 }

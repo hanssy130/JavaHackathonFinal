@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 import java.awt.*;
 
-public class TimelineMenu extends Application {
+public class TimelineMenu extends Stage {
 
     // Button directs to Border Control, Travel, & Finding Cases timeline.
     private Button btnBorderControl;
@@ -27,21 +27,15 @@ public class TimelineMenu extends Application {
     // Button directs to Communication timeline.
     private Button btnCommunication;
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+    // Back button
+    private Button btnBack;
 
-    @Override
-    public void start(Stage primaryStage) {
+
+    public void timeLineStage() {
 
         // Initializes the buttons
         btnBorderControl = new Button("Say 'Hello World' Actions on Border Control, Travel, & Finding Cases");
-        btnBorderControl.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
+        btnBorderControl.setOnAction(event -> System.out.println("Hello World!"));
         btnResourceAllocation = new Button("Actions on Resource Allocation");
         btnResourceAllocation.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -56,15 +50,14 @@ public class TimelineMenu extends Application {
                 newWindow.setScene(thirdScene);
 
                 // Set position of second window, related to primary window.
-                newWindow.setX(primaryStage.getX() + 200);
-                newWindow.setY(primaryStage.getY() + 100);
+                newWindow.setX(200);
+                newWindow.setY(100);
 
                 newWindow.show();
             }
         });
 
         btnCommunication = new Button("Actions on Communication");
-
         btnCommunication.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -78,15 +71,21 @@ public class TimelineMenu extends Application {
                 newWindow.setScene(secondScene);
 
                 // Set position of second window, related to primary window.
-                newWindow.setX(primaryStage.getX() + 200);
-                newWindow.setY(primaryStage.getY() + 100);
+                newWindow.setX(200);
+                newWindow.setY(100);
 
                 newWindow.show();
             }
         });
 
+        btnBack = new Button("Back");
+        btnBack.setOnAction(actionEvent -> {
+            new MainMenu().firstStage();
+            this.close();
+        });
+
         // Controls the buttons' spacing & alignment
-        VBox buttons = new VBox(btnBorderControl, btnResourceAllocation, btnCommunication);
+        VBox buttons = new VBox(btnBorderControl, btnResourceAllocation, btnCommunication, btnBack);
         final int spacing = 15;
         final int inset = 15;
         buttons.setSpacing(spacing);
@@ -99,8 +98,8 @@ public class TimelineMenu extends Application {
 
         Scene scene = new Scene(root, 800, 600, Color.LIGHTBLUE);
 
-        primaryStage.setTitle("Timeline");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        this.setTitle("Timeline");
+        this.setScene(scene);
+        this.show();
     }
 }
