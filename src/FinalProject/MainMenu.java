@@ -14,8 +14,6 @@ import javafx.stage.Stage;
 
 public class MainMenu extends Stage {
 
-
-
     public void firstStage() {
         BorderPane layoutMainMenu = new BorderPane();
         layoutMainMenu.setBackground(new Background(
@@ -23,9 +21,8 @@ public class MainMenu extends Stage {
                         CornerRadii.EMPTY,
                         Insets.EMPTY
                         )));
-        //Spacing from window border to actual layout is 10px every side.
+        // Spacing from window border to actual layout is 10px every side.
         layoutMainMenu.setPadding(new Insets(10));
-
 
         // Button to go to scene with buttons to time lines
         Button buttonTimelines = new Button("Go to timelines");
@@ -39,11 +36,11 @@ public class MainMenu extends Stage {
 
         layoutMainMenu.setBottom(menuBottomMainMenu);
 
-        Label title = new Label("What is Covid-19?");
+        Label title = new Label("Taiwan #1");
         /*
         Set font and font size.
          */
-        title.setFont(new Font("Arial", 30));
+        title.setFont(new Font("Arial", 50));
 
         /*
         This is the HBox to hold the title
@@ -54,17 +51,14 @@ public class MainMenu extends Stage {
 
         layoutMainMenu.setTop(menuTop);
 
-
-
         VBox centerText = new VBox();
         Text introduction = new Text();
-        introduction.setText("This is sample Covid-19 text");
+        introduction.setText("How Taiwan Contained an Epidemic Virus Better Than the Rest");
         introduction.setFont(new Font(30));
 
         centerText.getChildren().add(introduction);
         centerText.setAlignment(Pos.TOP_CENTER);
         layoutMainMenu.setCenter(centerText);
-
 
         Scene sceneMain = new Scene(layoutMainMenu, 800, 600);
 
