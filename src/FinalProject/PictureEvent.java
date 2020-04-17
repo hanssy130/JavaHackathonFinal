@@ -7,5 +7,7 @@ public class PictureEvent extends Event {
     public PictureEvent(String date, String description, String link) {
         super(date, description);
         this.link = link;
+
+
     }
 }

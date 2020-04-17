@@ -64,7 +64,6 @@ public class TimelineMenu extends Application {
         });
 
         btnCommunication = new Button("Actions on Communication");
-
         btnCommunication.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
