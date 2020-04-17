@@ -1,0 +1,73 @@
+Taiwan Research
+
+Coronavirus Cases:	395
+Deaths:			6
+Recovered:		166
+Source: https://www.worldometers.info/coronavirus/country/taiwan/
+
+Taiwan's first case
+- 50 year old woman
+- Jan 21
+- Was teaching in Wuhan
+Source: https://focustaiwan.tw/society/202001210019
+
+
+---Random Article Facts---
+Population: 	~24 million people
+SARS		- 2003
+		- 181 people died
+Transparency	- Daily briefings 
+		- Avoided strict lockdowns
+Other actions	- Donate 10 million masks to USA, Italy, Spain, European countries
+Source: https://www.cnn.com/2020/04/04/asia/taiwan-coronavirus-response-who-intl-hnk/index.html
+
+---List of Actions Taken by Taiwan---
+-----Actions on Border Control, Travel, & Finding Cases-----
+Dec 31	- Start inspecting passengers
+Jan 20	- Start level2/level3 travel alerts from China
+Jan 23	- Wuhan residents banned
+Jan 25	- Tours to China suspended
+Jan 29	- Electronic monitoring of quarantined individuals via government-issued cell phones
+Feb 7 	- Couple fined NT$300,000(USD$10,000) for breaking 14-day quarantine rule
+	- foreign tavel to China, Hong Kong, or Macau
+Feb 11	- travelers entering Taiwan must complete accurate health declaration form
+
+-----Actions on Resource Allocation-----
+Jan 22	- Government allocates masks to retailers and sets price limit of 50 masks at NT$300 (USD $10)
+	- Ministry of Economic Affairs lists daily local mask manufacturing capability at 2.44million units which surpasses the local demand of 1.3 million per day
+Jan 24	- Testing of COVID-19 to take place at Taiwan CDC or eight designated hospitals
+	- Outbound travelers can only take up to 250 masks
+Jan 30	- 4 million masks released daily from local manufacturers
+	- Only 1-3 masks are allowed per purchase at convenience stores, local pharmacies, and
+medical supply stores
+	- Mask prices are currently fixed at NT$8 apiece (USD $0.27)
+	- Taiwan’s High Prosecutors Office starts a nationwide campaign to stop profiteering by raising prices on disease prevention products; penalty is 1-7 years in jail and a fine up to NT$5 million (USD $167,000)
+	- 4 million surgical masks produced per day with 1.4 million allotted to hospitals and medical workers with remaining 2.6 million for consumer sales
+Feb 1	- Mask prices drop to NT$6 apiece (USD $0.20)
+Feb 2	- Government facilities (dorms or spare military camps) used for quarantine.
+	- Soldiers sent to mask factories
+	- 60 additional surgical mask machines being installed with 10% of capacity reserved for
+children. Each machine can manufacture 100,000 surgical masks per day. Normally, 60 production lines requires 4-6 months to activate but all will be ready in one month. The daily output will be boosted to 10 million masks a day.
+Feb 3	- New name-based rationing system announced for purchase of face masks
+	- Engineers with the Digital Minister develop an app for the public to see pharmacies’ mask stocks
+	- 500,000 children’s masks distributed to private kindergartens for free
+	- Taipei to punish claw machine operators who sell masks and disinfectants
+Feb 11	- Government invested NT$200M (USD $6.66 million) to purchase equipment and add production lines
+	- 1,800+ Army Reserve troops have aided in mask production across 28 manufacturers
+Feb 17	- Daily testing capacity for COVID-19 is approximately 1,300 samples
+	- Daily mask output is 5 million masks; sellers now allotted 400 masks a day
+-----Actions on Communications-----
+Jan 22	-  fake news on epidemic can be fined up to NT$3
+million (USD $100,000)
+Feb 2	- Government extended school winter break from Feb 15 to Feb 25
+Feb 5	- Public servants given 14-days of unpaid leave to care for children under 12 if reason is
+due to coronavirus between Feb 11-24
+Feb 9	- Taiwanese national in Japan prosecuted for spreading rumors that cyanide can ward off
+the coronavirus
+Feb 11	- Criminal Investigation Bureau questioned suspects on spreading a rumor of a toilet
+paper shortage due to face mask production, sparking a toilet paper panic
+Feb 13	- NT$60 billion (USD $2 billion) allocated for businesses affected by the epidemic
+Feb 19	- disinfect public spaces around schools and school areas open to the public during winter break
+	- The Ministry of Education announced student absences due to fever or respiratory symptoms will not count on students’ attendance records
+Feb 21	- Ministry of Labor to provide financial assistance to workers furloughed due to COVID-19 and receive up to NT$18,960 a month (USD $630) in subsidies.
+Source: https://cdn.jamanetwork.com/ama/content_public/journal/jama/0/jvp200035supp1_prod.pdf?Expires=2147483647&Signature=bIZCLS7ZLWTJd~U~H40JgiEGdFb3ggVUJpBvJ7KdANK7HgK1zaj4uWHvqweGym1nWfO~nXt9Y5i1vX79pF7zjjqfzmJAy3udTdpVVZQe07xnQIPcBMXLwZ5XjgTO8yKFXVIpxsXhrmOu8sGSpKiEmQ86ZCKfOTar7fMAGmUCtjiYVFwf31K3REWAA-r3hZyoZpqz3QKpVgpsRpF9fV9thQCq0~yvbvRKTH4PcoB~CZgmXH7rpVb6bILXQn5zBCphf6pyLAa4zIebUEKfCdCYdSdi9LeIEUsesqsYpNWgHJcr4K1LC0hFlst0RHQz-vZ7I-OvrX~5jel6zjjtuDQzjQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
