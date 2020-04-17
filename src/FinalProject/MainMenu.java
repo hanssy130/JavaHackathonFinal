@@ -62,7 +62,7 @@ public class MainMenu extends Stage {
 
         layoutMainMenu.setTop(menuTop);
 
-        VBox centerText = new VBox();
+
         Text introduction = new Text();
         introduction.setText("How Taiwan Contained an Epidemic Virus Better Than the Rest");
         introduction.setFont(new Font(16));
