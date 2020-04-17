@@ -8,10 +8,14 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
-public class LineChartExamples extends Application {
+public class LineChartExamples {
+    private Scene scene;
 
-    @Override public void start(Stage stage) {
-        stage.setTitle("Line Chart Sample");
+    LineChartExamples() {
+
+    }
+
+    public void makeGraph() {
         //defining the axes
         final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
@@ -37,17 +41,20 @@ public class LineChartExamples extends Application {
         series.getData().add(new XYChart.Data<>("November", 29));
         series.getData().add(new XYChart.Data<>("December", 25));
 
-        Scene scene  = new Scene(lineChart,800,600);
+        this.scene  = new Scene(lineChart,800,600);
         lineChart.getData().add(series);
-
-        stage.setScene(scene);
-        stage.show();
     }
 
-    public static void main(String[] args) {
-        launch(args);
+    public Scene getScene() {
+        return scene;
     }
 
-
-
+    //    @Override public void start(Scene scene) {
+//        stage.setScene(scene);
+//        stage.show();
+//    }
+//
+//    public static void main(String[] args) {
+//        launch(args);
+//    }
 }
