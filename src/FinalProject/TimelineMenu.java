@@ -11,6 +11,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -43,6 +44,27 @@ public class TimelineMenu extends Application {
         });
         btnResourceAllocation = new Button("Actions on Resource Allocation");
         btnCommunication = new Button("Actions on Communication");
+
+        btnCommunication.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Text something = new Text("This is information");
+                StackPane secondaryLayout = new StackPane(something);
+
+                Scene secondScene = new Scene(secondaryLayout, 400, 300);
+
+                // New window (Stage)
+                Stage newWindow = new Stage();
+                newWindow.setTitle("Second Stage");
+                newWindow.setScene(secondScene);
+
+                // Set position of second window, related to primary window.
+                newWindow.setX(primaryStage.getX() + 200);
+                newWindow.setY(primaryStage.getY() + 100);
+
+                newWindow.show();
+            }
+        });
 
         // Controls the buttons' spacing & alignment
         VBox buttons = new VBox(btnBorderControl, btnResourceAllocation, btnCommunication);
