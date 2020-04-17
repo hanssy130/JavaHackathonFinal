@@ -45,6 +45,7 @@ public class Ball extends Circle implements Runnable {
      *
      * @param xPosition double
      * @param yPosition double
+     * @param infected boolean
      */
     public Ball(int xPosition, int yPosition, boolean infected) {
         super(BALL_SIZE);
