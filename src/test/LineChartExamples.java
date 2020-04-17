@@ -9,45 +9,38 @@ import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
 public class LineChartExamples {
-    private Scene scene;
+    private LineChart <String, Number> output;
 
-    LineChartExamples() {
 
+    private void insert(XYChart.Series<String, Number> series, String xAxis, int yAxis) {
+        series.getData().add(new XYChart.Data<>(xAxis, yAxis));
     }
-
-    public void makeGraph() {
+    public LineChart<String, Number> makeGraph(String xLabel, String yLabel,
+                                               String name, String[] xData, int[] yData) {
         //defining the axes
         final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
-        xAxis.setLabel("Number of Month");
+        xAxis.setLabel(xLabel);
+        yAxis.setLabel(yLabel);
         //creating the chart
         final LineChart<String, Number> lineChart = new LineChart<>(xAxis, yAxis);
 
-        lineChart.setTitle("KILL ME");
+        lineChart.setTitle(name);
         //defining a series
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("My portfolio");
         //populating the series with data
-        series.getData().add(new XYChart.Data<>("January", 23));
-        series.getData().add(new XYChart.Data<>("February", 14));
-        series.getData().add(new XYChart.Data<>("March", 15));
-        series.getData().add(new XYChart.Data<>("April", 24));
-        series.getData().add(new XYChart.Data<>("May", 34));
-        series.getData().add(new XYChart.Data<>("June", 36));
-        series.getData().add(new XYChart.Data<>("July", 22));
-        series.getData().add(new XYChart.Data<>("August", 45));
-        series.getData().add(new XYChart.Data<>("September", 43));
-        series.getData().add(new XYChart.Data<>("October", 17));
-        series.getData().add(new XYChart.Data<>("November", 29));
-        series.getData().add(new XYChart.Data<>("December", 25));
-
-        this.scene  = new Scene(lineChart,800,600);
+        int counter = 0;
+        for (String data: xData) {
+            insert(series, data, yData[counter]);
+            counter++;
+        }
+        //this.scene  = new Scene(lineChart,800,600);
         lineChart.getData().add(series);
+        return lineChart;
     }
 
-    public Scene getScene() {
-        return scene;
-    }
+
 
     //    @Override public void start(Scene scene) {
 //        stage.setScene(scene);
