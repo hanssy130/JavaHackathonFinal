@@ -1,4 +1,4 @@
-package ca.bcit.comp2522.finalhackathon2.src.test;
+package test;
 
 /**
  * @author Jason Lui (A00930386)
