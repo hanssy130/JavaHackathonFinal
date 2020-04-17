@@ -2,6 +2,7 @@ package FinalProject;
 
 import javafx.application.Platform;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 
 import java.util.List;
@@ -19,9 +20,12 @@ public class Ball extends Circle implements Runnable {
     private static final int MAX_X = 500; // horizontal edge of enclosing Panel
     private static final int MAX_Y = 500; // vertical edge of enclosing Panel
     private static final int BALL_SIZE = 10; // size of a ball
-    private static final int MAX_HORIZONTAL_SPEED = 5; // max horizontal speed
-    private static final int MAX_VERTICAL_SPEED = 5; // max vertical speed
+    private static final int MAX_HORIZONTAL_SPEED = 3; // max horizontal speed
+    private static final int MAX_VERTICAL_SPEED = 3; // max vertical speed
     private static final int SLEEP_DURATION = 20; // sleep time
+    private static final Paint INFECTED_COLOR = Color.RED;
+    private static final Paint RECOVERED_COLOR = Color.BLUE;
+    private static final Paint UNINFECTED_COLOR = Color.GREEN;
 
     private static final Random GENERATOR = new Random();
     private double dx; // change in horizontal position of ball
@@ -29,19 +33,26 @@ public class Ball extends Circle implements Runnable {
     private boolean immune;
     private boolean infected;
 
-
     /**
      * Constructs an object of type Ball.
      *
      * @param xPosition double
      * @param yPosition double
      */
-    public Ball(int xPosition, int yPosition) {
-        super(BALL_SIZE, Color.RED);
+    public Ball(int xPosition, int yPosition, boolean infected) {
+        super(BALL_SIZE);
         this.setCenterX(xPosition);
         this.setCenterY(yPosition);
-        dx = (MAX_HORIZONTAL_SPEED - 1) * GENERATOR.nextDouble() + 1; // change in x
-        dy = (MAX_VERTICAL_SPEED - 1) * GENERATOR.nextDouble() + 1; // change in y
+        this.dx = (MAX_HORIZONTAL_SPEED - 1) * GENERATOR.nextDouble() + 1; // change in x
+        this.dy = (MAX_VERTICAL_SPEED - 1) * GENERATOR.nextDouble() + 1; // change in y
+        this.infected = infected;
+        this.immune = false;
+
+        if (infected) {
+            this.setFill(INFECTED_COLOR);
+        } else {
+            this.setFill(UNINFECTED_COLOR);
+        }
     }
 
     /*
@@ -52,6 +63,17 @@ public class Ball extends Circle implements Runnable {
         b1.dy *= -1;
         b2.dx *= -1;
         b2.dy *= -1;
+    }
+
+    /**
+     * Attempts to infect another ball
+     */
+    private void infect(Ball contactedBall) {
+        if (!contactedBall.immune) {
+            contactedBall.immune = true;
+            contactedBall.infected = true;
+            contactedBall.setFill(INFECTED_COLOR);
+        }
     }
 
     /*
@@ -67,6 +89,11 @@ public class Ball extends Circle implements Runnable {
             if (xDiff * xDiff + yDiff * yDiff <= sumRadii * sumRadii
                     && xDiff * (this.dx - ball.dx) + yDiff * (this.dy - ball.dy) < 0) {
                 ballCollision(this, ball);
+                if (this.infected) {
+                    infect(ball);
+                } else if (ball.infected) {
+                    infect(this);
+                }
             }
         }
     }
