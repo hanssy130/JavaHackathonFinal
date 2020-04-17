@@ -2,6 +2,7 @@ package test;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
@@ -12,29 +13,29 @@ public class LineChartExamples extends Application {
     @Override public void start(Stage stage) {
         stage.setTitle("Line Chart Sample");
         //defining the axes
-        final NumberAxis xAxis = new NumberAxis();
+        final CategoryAxis xAxis = new CategoryAxis();
         final NumberAxis yAxis = new NumberAxis();
         xAxis.setLabel("Number of Month");
         //creating the chart
-        final LineChart<Number, Number> lineChart = new LineChart<Number,Number>(xAxis, yAxis);
+        final LineChart<String, Number> lineChart = new LineChart<>(xAxis, yAxis);
 
         lineChart.setTitle("KILL ME");
         //defining a series
-        XYChart.Series<Number, Number> series = new XYChart.Series<>();
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("My portfolio");
         //populating the series with data
-        series.getData().add(new XYChart.Data<>(1, 23));
-        series.getData().add(new XYChart.Data<>(2, 14));
-        series.getData().add(new XYChart.Data<>(3, 15));
-        series.getData().add(new XYChart.Data<>(4, 24));
-        series.getData().add(new XYChart.Data<>(5, 34));
-        series.getData().add(new XYChart.Data<>(6, 36));
-        series.getData().add(new XYChart.Data<>(7, 22));
-        series.getData().add(new XYChart.Data<>(8, 45));
-        series.getData().add(new XYChart.Data<>(9, 43));
-        series.getData().add(new XYChart.Data<>(10, 17));
-        series.getData().add(new XYChart.Data<>(11, 29));
-        series.getData().add(new XYChart.Data<>(12, 25));
+        series.getData().add(new XYChart.Data<>("January", 23));
+        series.getData().add(new XYChart.Data<>("February", 14));
+        series.getData().add(new XYChart.Data<>("March", 15));
+        series.getData().add(new XYChart.Data<>("April", 24));
+        series.getData().add(new XYChart.Data<>("May", 34));
+        series.getData().add(new XYChart.Data<>("June", 36));
+        series.getData().add(new XYChart.Data<>("July", 22));
+        series.getData().add(new XYChart.Data<>("August", 45));
+        series.getData().add(new XYChart.Data<>("September", 43));
+        series.getData().add(new XYChart.Data<>("October", 17));
+        series.getData().add(new XYChart.Data<>("November", 29));
+        series.getData().add(new XYChart.Data<>("December", 25));
 
         Scene scene  = new Scene(lineChart,800,600);
         lineChart.getData().add(series);
