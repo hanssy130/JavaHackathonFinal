@@ -3,6 +3,8 @@ package FinalProject;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
@@ -16,6 +18,10 @@ import java.awt.*;
 
 public class TimelineMenu extends Application {
 
+    private Button btnBorderControl;
+    private Button btnResourceAllocation;
+    private Button btnCommunication;
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -23,20 +29,24 @@ public class TimelineMenu extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-        Button btn = new Button();
-        btn.setText("Say 'Hello World' Actions on Border Control, Travel, & Finding Cases");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-
+        btnBorderControl = new Button("Say 'Hello World' Actions on Border Control, Travel, & Finding Cases");
+        btnBorderControl.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Hello World!");
             }
         });
 
-        Button btn1 = new Button("Actions on Resource Allocation");
-        Button btn2 = new Button("Actions on Communication");
+        btnResourceAllocation = new Button("Actions on Resource Allocation");
+        btnCommunication = new Button("Actions on Communication");
 
-        VBox buttons = new VBox(btn, btn1, btn2);
+        VBox buttons = new VBox(btnBorderControl, btnResourceAllocation, btnCommunication);
+        final int spacing = 15;
+        final int inset = 15;
+        buttons.setSpacing(spacing);
+        buttons.setPadding(new Insets(inset, 0, 0, 0));
+        buttons.setAlignment(Pos.CENTER);
+
 
         StackPane root = new StackPane();
         root.getChildren().add(buttons);
