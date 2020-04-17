@@ -12,14 +12,11 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class MainMenu extends Application {
+public class MainMenu extends Stage {
 
-    public static void main(String[] args) {
-        launch(args);
-    }
 
-    @Override
-    public void start(Stage primaryStage) {
+
+    public void firstStage() {
         BorderPane layoutMainMenu = new BorderPane();
         layoutMainMenu.setBackground(new Background(
                 new BackgroundFill(Color.rgb(173, 216, 230),
@@ -32,6 +29,10 @@ public class MainMenu extends Application {
 
         // Button to go to scene with buttons to time lines
         Button buttonTimelines = new Button("Go to timelines");
+        buttonTimelines.setOnAction(actionEvent -> {
+            new TimelineMenu().timeLineStage();
+            this.close();
+        });
 
         HBox menuBottomMainMenu = new HBox();
         menuBottomMainMenu.getChildren().addAll(buttonTimelines);
@@ -67,10 +68,10 @@ public class MainMenu extends Application {
 
         Scene sceneMain = new Scene(layoutMainMenu, 800, 600);
 
-        primaryStage.setTitle("Main Menu");
-        primaryStage.setScene(sceneMain);
-        primaryStage.setResizable(false);
-        primaryStage.show();
+        this.setTitle("Main Menu");
+        this.setScene(sceneMain);
+        this.setResizable(false);
+        this.show();
     }
 
 
