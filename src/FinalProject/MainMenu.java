@@ -37,7 +37,8 @@ public class MainMenu extends Stage {
         Button buttonCovid19 = new Button();
         buttonCovid19.setText("What is Covid-19?");
         buttonCovid19.setOnAction(actionEvent -> {
-            System.out.println("Currently not functional");
+            new Covid19().info();
+            this.close();
         });
 
         Button buttonTimelines = new Button();
