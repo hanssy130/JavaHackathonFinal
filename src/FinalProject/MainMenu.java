@@ -29,7 +29,10 @@ public class MainMenu extends Stage {
         // Button to go to scene with buttons to time lines
         Button buttonIntroduction = new Button();
         buttonIntroduction.setText("Introduction");
-
+        buttonIntroduction.setOnAction(actionEvent -> {
+            new Introduction().introductionStage();
+            this.close();
+        });
 
         Button buttonCovid19 = new Button();
         buttonCovid19.setText("What is Covid-19?");
@@ -43,7 +46,6 @@ public class MainMenu extends Stage {
             new TimelineMenu().timeLineStage();
             this.close();
         });
-        
 
         Label title = new Label("Taiwan #1");
         /*
