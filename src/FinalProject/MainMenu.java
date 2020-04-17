@@ -24,22 +24,20 @@ public class MainMenu extends Stage {
         // Spacing from window border to actual layout is 10px every side.
         layoutMainMenu.setPadding(new Insets(10));
 
-        Button buttonIntroductions = new Button("Go to timelines");
+        Button buttonIntroductions = new Button("Introduction");
         buttonIntroductions.setOnAction(actionEvent -> {
             new Introduction().introductionStage();
             this.close();
         });
 
         // Button to go to scene with buttons to timelines
-        Button buttonTimelines = new Button("Go to timelines");
+        Button buttonTimelines = new Button("Timeline of Events");
         buttonTimelines.setOnAction(actionEvent -> {
             new TimelineMenu().timeLineStage();
             this.close();
         });
 
-
-
-        HBox menuBottomMainMenu = new HBox();
+        VBox menuBottomMainMenu = new VBox();
         menuBottomMainMenu.getChildren().addAll(buttonIntroductions, buttonTimelines);
 
         layoutMainMenu.setBottom(menuBottomMainMenu);
