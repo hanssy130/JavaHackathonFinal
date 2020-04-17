@@ -16,7 +16,10 @@ public class MainMenu extends Application {
     public void start(Stage primaryStage) {
         StackPane stackPane = new StackPane();
 
-        Scene scene = new Scene(stackPane, 600, 400, Color.LIGHTBLUE);
+
+
+
+        Scene scene = new Scene(stackPane, 800, 600, Color.LIGHTBLUE);
         primaryStage.setTitle("Main Menu");
         primaryStage.setScene(scene);
         primaryStage.show();
