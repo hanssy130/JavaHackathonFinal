@@ -50,8 +50,8 @@ public class Ball extends Circle implements Runnable {
         super(BALL_SIZE);
         this.setCenterX(xPosition);
         this.setCenterY(yPosition);
-        this.dx = (MAX_HORIZONTAL_SPEED - 1) * GENERATOR.nextDouble() + 1; // change in x
-        this.dy = (MAX_VERTICAL_SPEED - 1) * GENERATOR.nextDouble() + 1; // change in y
+        this.dx = MAX_HORIZONTAL_SPEED * GENERATOR.nextDouble(); // change in x
+        this.dy = MAX_VERTICAL_SPEED * GENERATOR.nextDouble(); // change in y
         this.immune = false;
         this.infected = infected;
         this.alive = true;
