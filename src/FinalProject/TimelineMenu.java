@@ -1,14 +1,12 @@
 package FinalProject;
 
-import javafx.application.Application;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
@@ -58,24 +56,21 @@ public class TimelineMenu extends Stage {
         });
 
         btnCommunication = new Button("Actions on Communication");
-        btnCommunication.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                Event hey = new Event("Dec 31", "I ate a cat.");
-                StackPane secondaryLayout = new StackPane(hey);
-                Scene secondScene = new Scene(secondaryLayout, 400, 300);
+        btnCommunication.setOnAction(event -> {
+            Event hey = new Event("Dec 31", "I ate a cat.");
+            StackPane secondaryLayout = new StackPane(hey);
+            Scene secondScene = new Scene(secondaryLayout, 400, 300);
 
-                // New window (Stage)
-                Stage newWindow = new Stage();
-                newWindow.setTitle("Example Event");
-                newWindow.setScene(secondScene);
+            // New window (Stage)
+            Stage newWindow = new Stage();
+            newWindow.setTitle("Example Event");
+            newWindow.setScene(secondScene);
 
-                // Set position of second window, related to primary window.
-                newWindow.setX(200);
-                newWindow.setY(100);
+            // Set position of second window, related to primary window.
+            newWindow.setX(200);
+            newWindow.setY(100);
 
-                newWindow.show();
-            }
+            newWindow.show();
         });
 
         btnBack = new Button("Back");
@@ -92,9 +87,9 @@ public class TimelineMenu extends Stage {
         buttons.setPadding(new Insets(inset, 0, 0, 0));
         buttons.setAlignment(Pos.CENTER);
 
-        StackPane root = new StackPane();
+        BorderPane root = new BorderPane();
         root.setBackground(new Background(new BackgroundFill(Color.rgb(173, 216, 230), CornerRadii.EMPTY, Insets.EMPTY)));
-        root.getChildren().add(buttons);
+        root.setCenter(buttons);
 
         Scene scene = new Scene(root, 800, 600, Color.LIGHTBLUE);
 
