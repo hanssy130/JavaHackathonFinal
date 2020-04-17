@@ -27,6 +27,9 @@ public class TimelineMenu extends Stage {
     // Button directs to Communication timeline.
     private Button btnCommunication;
 
+    // Back button
+    private Button btnBack;
+
 
     public void timeLineStage() {
 
@@ -75,8 +78,14 @@ public class TimelineMenu extends Stage {
             }
         });
 
+        btnBack = new Button("Back");
+        btnBack.setOnAction(actionEvent -> {
+            new MainMenu().firstStage();
+            this.close();
+        });
+
         // Controls the buttons' spacing & alignment
-        VBox buttons = new VBox(btnBorderControl, btnResourceAllocation, btnCommunication);
+        VBox buttons = new VBox(btnBorderControl, btnResourceAllocation, btnCommunication, btnBack);
         final int spacing = 15;
         final int inset = 15;
         buttons.setSpacing(spacing);

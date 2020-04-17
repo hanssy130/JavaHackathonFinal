@@ -14,9 +14,9 @@ public class Event extends Group {
         this.date = date;
         this.description = description;
 
-        Text something = new Text(description);
-        Text somethingelse = new Text(date);
-        VBox stackPane = new VBox(somethingelse, something);
+        Text eventDate = new Text(date);
+        Text eventDescription = new Text(description);
+        VBox stackPane = new VBox(eventDate, eventDescription);
 
         getChildren().addAll(stackPane);
     }

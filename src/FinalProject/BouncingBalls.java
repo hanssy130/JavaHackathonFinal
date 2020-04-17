@@ -35,24 +35,35 @@ public class BouncingBalls extends Application {
     }
 
     /**
-     * Generate the number of balls and add them to BALLS and the canvas.
+     * Generate the uninfected population of balls and add them to BALLS and the canvas.
      *
      * @param canvas        Pane
      * @param numberOfBalls int
      */
-    private void generateBalls(Pane canvas, int numberOfBalls) {
+    private void generateUninfectedBalls(Pane canvas, int numberOfBalls) {
         for (int i = 0; i < numberOfBalls; i++) {
-            Ball ball = new Ball(GENERATOR.nextInt(MAX_X), GENERATOR.nextInt(MAX_Y));
+            Ball ball = new Ball(GENERATOR.nextInt(MAX_X), GENERATOR.nextInt(MAX_Y), false);
             canvas.getChildren().add(ball);
             BALLS.add(ball);
         }
     }
 
     /**
+     * Generate the infected ball and add it to BALLS and the canvas.
+     *
+     * @param canvas Pane
+     */
+    private void generateInfectedBall(Pane canvas) {
+        Ball ball = new Ball(GENERATOR.nextInt(MAX_X), GENERATOR.nextInt(MAX_Y), true);
+        canvas.getChildren().add(ball);
+        BALLS.add(ball);
+    }
+
+    /**
      * Starts the threads for the balls
      */
     private void threadBalls() {
-        for (Ball ball: BALLS) {
+        for (Ball ball : BALLS) {
             Thread bouncer = new Thread(ball);
             bouncer.setDaemon(true);
             bouncer.start();
@@ -71,7 +82,8 @@ public class BouncingBalls extends Application {
         Scanner scanner = new Scanner(System.in);
 
         int numberOfBalls = scanner.nextInt();
-        generateBalls(canvas, numberOfBalls);
+        generateUninfectedBalls(canvas, numberOfBalls);
+        generateInfectedBall(canvas);
 
         primaryStage.setTitle("Threads and Balls");
         primaryStage.setScene(scene);
