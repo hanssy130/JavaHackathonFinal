@@ -37,7 +37,7 @@ public class COVIDBall extends Ball {
     private int infectionDistance;
 
     /**
-     * Constructs an object of type COVIDBall.
+     * Constructs an object of type COVIDBall. test
      *
      * @param xPosition double
      * @param yPosition double
