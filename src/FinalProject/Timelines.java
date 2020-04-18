@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 
 /**
  * Holds the different Timeline Stages.
- *
  * @author Hans Sy
  * @version 2020
  */
