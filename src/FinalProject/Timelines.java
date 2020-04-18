@@ -35,10 +35,9 @@ public class Timelines extends Stage {
             this.close();
         });
 
-        String[] stuff = {"yes", "fam"};
-        String[] describe = {"stuff happened", "stuff happened again"};
+        String[] stuff = TimelineInfo.borderControlDates();
+        String[] describe = TimelineInfo.borderControlStage();
         TimelineGraphic test = new TimelineGraphic(stuff, describe);
-
         // Use Vbox to stack vertically.
         VBox vbox = new VBox();
         vbox.getChildren().addAll(title, test.getTimeline(), btnBack);
@@ -46,7 +45,7 @@ public class Timelines extends Stage {
 
         // Create the scene.
         Scene sceneMain = new Scene(layoutIntro, 800, 600);
-        this.setTitle("Introduction");
+        this.setTitle("Border Control");
         this.setScene(sceneMain);
         this.setResizable(false);
         this.show();
@@ -72,9 +71,13 @@ public class Timelines extends Stage {
             this.close();
         });
 
+        String[] stuff = TimelineInfo.resourceAllocationDates();
+        String[] describe = TimelineInfo.resourceAllocation();
+        TimelineGraphic test = new TimelineGraphic(stuff, describe);
+
         // Use Vbox to stack vertically.
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(title, btnBack);
+        vbox.getChildren().addAll(title, test.getTimeline(), btnBack);
         vbox.setAlignment(Pos.TOP_LEFT);
         layoutIntro.setCenter(vbox);
 
@@ -106,9 +109,13 @@ public class Timelines extends Stage {
             this.close();
         });
 
+        String[] stuff = TimelineInfo.communicationDates();
+        String[] describe = TimelineInfo.communicationsStage();
+        TimelineGraphic test = new TimelineGraphic(stuff, describe);
+
         // Use Vbox to stack vertically.
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(title, btnBack);
+        vbox.getChildren().addAll(title, test.getTimeline(), btnBack);
         vbox.setAlignment(Pos.TOP_LEFT);
         layoutIntro.setCenter(vbox);
 

@@ -19,7 +19,7 @@ public class TimeMark extends Group {
 
     private void moveText(Text text, int howFarDownCircle) {
         final int textYTranslation = 320;
-        final int textOffset = 16;
+        final int textOffset = 30;
         text.setY(textYTranslation);
         text.setX(howFarDownCircle - textOffset);
     }
@@ -36,7 +36,7 @@ public class TimeMark extends Group {
     private Stage makePopUp(String markName, String description) {
         TaiwanEvent hey = new TaiwanEvent(markName, description);
         StackPane secondaryLayout = new StackPane(hey);
-        Scene secondScene = new Scene(secondaryLayout, 400, 300);
+        Scene secondScene = new Scene(secondaryLayout, 600, 480);
         Stage newWindow = new Stage();
         newWindow.setTitle("Event");
         newWindow.setScene(secondScene);
