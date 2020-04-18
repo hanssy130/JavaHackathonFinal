@@ -52,7 +52,8 @@ public class Covid19 extends Stage {
         Button buttonSimulation = new Button();
         buttonSimulation.setText("Contagious Virus Simulation");
         buttonSimulation.setOnAction(actionEvent -> {
-            System.out.println("Currently has no functionality");
+            new Taiwan().start();
+            this.close();
         });
 
         HBox bottomContent = new HBox();

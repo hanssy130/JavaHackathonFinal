@@ -17,35 +17,22 @@ public class Taiwan extends BouncingBalls {
 
     /**
      * Demonstrates threading in JavaFX.
-     *
-     * @param primaryStage contains the Scene
      */
-    public void start(Stage primaryStage) {
+    public void start() {
+        final int yOffset = 100;
         Pane canvas = new Pane();
-        Scene scene = new Scene(canvas, MAX_X, MAX_Y);
+        Scene scene = new Scene(canvas, MAX_X, MAX_Y + yOffset);
         System.out.println("Enter the number of balls: ");
-        Scanner scanner = new Scanner(System.in);
 
-        int numberOfBalls = scanner.nextInt();
+        final int numberOfBalls = 20;
         generateUninfectedBalls(canvas, numberOfBalls, TAIWAN_MOVE_SPEED, TAIWAN_MOVE_SPEED, TAIWAN_INFECTION_DISTANCE);
         generateInfectedBall(canvas, TAIWAN_MOVE_SPEED, TAIWAN_MOVE_SPEED, TAIWAN_INFECTION_DISTANCE);
 
-        primaryStage.setTitle("Threads and Balls");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        this.setTitle("Threads and Balls");
+        this.setScene(scene);
+        this.show();
 
         threadBalls();
     }
 
-    /**
-     * Launches the JavaFX application.  We still need a main method in our
-     * JavaFX applications.  The main method must do one thing.  Pass
-     * the command line arguments (args) to the launch method inherited from
-     * the Application class.
-     *
-     * @param args command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
-    }
 }
