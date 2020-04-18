@@ -1,6 +1,17 @@
 package FinalProject;
 
+/**
+ * Holds the information of Taiwan's decisions regarding COVID-19.
+ *
+ * @author Justin
+ * @version 2020
+ */
 public class TimelineInfo {
+
+    /**
+     * Holds the description of actions regarding Resource Allocation.
+     * @return an array of Strings.
+     */
     public static String[] resourceAllocation() {
         return new String[]{"The Taiwanese government allocates masks to retailers\n and sets price"
                 + " limit of 50 masks at NT$300 (USD $10). The Ministry of Economic\n Affairs lists daily"
@@ -32,6 +43,10 @@ public class TimelineInfo {
                         + " Daily mask output is 5 million masks; sellers now allotted 400 masks a day.\n"};
     }
 
+    /**
+     * Holds the description of actions regarding Border Control, Travel, & Finding Cases Timeline.
+     * @return an array of Strings.
+     */
     public static String[] borderControlStage() {
         return new String[] {"Taiwan starts inspecting passengers for coronavirus.\n",
                 "Taiwans sets Level 2 and Level 3 travel alerts to anyone coming/going to China\n",
@@ -40,6 +55,10 @@ public class TimelineInfo {
                 "Taiwan fines a couple for NT$300,000 for breaking 14-day quarantine rule.\n"};
     }
 
+    /**
+     * Holds the description of actions regarding Communication.
+     * @return an array of Strings.
+     */
     public static String[] communicationsStage() {
         return new String[] {"Taiwan enforces a new policy that people who spread fake news on epidemic\n"
                 + " can be fined up to NT$3 million (USD $100,000)\n",
@@ -56,12 +75,26 @@ public class TimelineInfo {
         };
     }
 
+    /**
+     * Holds the dates of the resource allocation events.
+     * @return an array of Strings.
+     */
     public static String[] resourceAllocationDates() {
         return new String[] {"December 31", "January 20", "January 25", "January 29", "February 7"};
     }
+
+    /**
+     * Holds the dates of the border control events.
+     * @return an array of Strings.
+     */
     public static String[] borderControlDates() {
         return new String[] {"January 22", "January 30", "February 2", "February 3", "February 17"};
     }
+
+    /**
+     * Holds the dates of the communication events.
+     * @return an array of Strings.
+     */
     public static String[] communicationDates() {
         return new String[] {"January 22", "February 2", "February 5", "February 11", "February 13"};
     }
