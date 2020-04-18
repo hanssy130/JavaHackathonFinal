@@ -1,4 +1,4 @@
-package test;
+package FinalProject;
 
 import FinalProject.Timeline;
 import javafx.application.Application;
@@ -20,7 +20,8 @@ public class ArrowDriver extends Application {
 //        TimeMark testMark5 = new TimeMark("Feb 7",650);
 //        Group display = new Group(tester, testMark, testMark2, testMark3, testMark4, testMark5);
         String[] stuff = {"yes", "fam"};
-        Timeline test = new Timeline(stuff);
+        String[] describe = {"stuff happened", "stuff happened again"};
+        Timeline test = new Timeline(stuff, describe);
         Scene scene = new Scene(test.getTimeline(), 800,  600);
         primaryStage.setScene(scene);
         primaryStage.show();
