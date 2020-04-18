@@ -22,6 +22,7 @@ public class BouncingBalls extends Stage {
 
     public static final int MAX_X = 600; // horizontal edge of enclosing Panel
     public static final int MAX_Y = 600; // vertical edge of enclosing Panel
+    public static final int Y_OFFSET = 100;
     private static final List<COVIDBall> COVID_BALLS = new ArrayList<>();
     private static final Random GENERATOR = new Random();
 
