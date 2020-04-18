@@ -10,7 +10,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
- * TimeMark assists with designing the Timeline Graphic
+ * TimeMark assists with designing the Timeline Graphic.
  * @author Justin
  * @version 2020
  */
