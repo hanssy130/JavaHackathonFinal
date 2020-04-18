@@ -1,6 +1,8 @@
 package FinalProject;
 
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
@@ -20,10 +22,27 @@ public class USA extends BouncingBalls {
      * Demonstrates threading in JavaFX.
      */
     public void start() {
-        Pane canvas = new Pane();
+
         Line border = new Line(0, 600, 600, 600);
         border.setStrokeWidth(3);
+
+        Button buttonExit = new Button();
+        buttonExit.setText("Return");
+        buttonExit.setOnAction(actionEvent -> {
+            this.close();
+        });
+
+        Button buttonNextSimulation = new Button();
+        buttonNextSimulation.setText("Next Simulation");
+        buttonNextSimulation.setOnAction(actionEvent -> {
+            new Taiwan().start();
+            this.close();
+        });
+
+        BorderPane canvas = new BorderPane();
         canvas.getChildren().addAll(border);
+
+
         Scene scene = new Scene(canvas, MAX_X, MAX_Y + Y_OFFSET);
 
         final int numberOfBalls = 20;
