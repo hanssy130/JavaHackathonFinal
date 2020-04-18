@@ -17,27 +17,26 @@ import javafx.stage.Stage;
  */
 public class Covid19 extends Stage {
 
-    public void info() {
+    public void covid19Stage() {
         // Pane Setup
-        BorderPane layoutIntro = new BorderPane();
-        layoutIntro.setBackground(new Background(
+        BorderPane layout = new BorderPane();
+        layout.setBackground(new Background(
                 new BackgroundFill(Color.rgb(173, 216, 230),
                         CornerRadii.EMPTY,
                         Insets.EMPTY
                 )));
-        layoutIntro.setPadding(new Insets(10));
+        layout.setPadding(new Insets(10));
 
         // Introduction info
-        Label title = new Label("Introduction");
+        Label title = new Label("What is COVID-19?");
         title.setFont(new Font("Arial", 50));
-        Text information = new Text("Coronaviruses are a large family of viruses. Some cause"
-                + " illness in people and others cause illness in animals. Human coronaviruses "
-                + "are common and are typically associated with mild illnesses, similar to the "
-                + "common cold.\n\n"
-                + "COVID-19 is a new disease that has not been previously identified in humans."
-                + " Rarely, animal coronaviruses can infect people, and more rarely, "
-                + "these can then spread from person to person through close contact.\n\n"
-                + "Presented by Brian, Hans, Jason, and Justin");
+        Text information = new Text("Coronaviruses are a large family of viruses. Some cause illness in people and " +
+                "others cause illness in animals. Human coronaviruses are common and are typically associated with " +
+                "mild illnesses, similar to the common cold.\n" +
+                "\n" +
+                "COVID-19 is a new disease that has not been previously identified in humans. Rarely, animal " +
+                "coronaviruses can infect people, and more rarely, these can then spread from person to person through " +
+                "close contact.\n");
         information.setWrappingWidth(550);
         information.setFont(new Font("Arial", 16));
 
@@ -48,14 +47,27 @@ public class Covid19 extends Stage {
             this.close();
         });
 
+        // Button to see simulations
+        Button buttonSimulation = new Button();
+        buttonSimulation.setText("Contagious Virus Simulation");
+        buttonSimulation.setOnAction(actionEvent -> {
+            System.out.println("test");
+        });
+
+        HBox bottomContent = new HBox();
+        bottomContent.getChildren().addAll(buttonSimulation);
+        bottomContent.setAlignment(Pos.CENTER);
+
+        layout.setBottom(bottomContent);
+
         // Use Vbox to stack vertically.
         VBox vbox = new VBox();
         vbox.getChildren().addAll(title, information, btnBack);
         vbox.setAlignment(Pos.TOP_LEFT);
-        layoutIntro.setCenter(vbox);
+        layout.setCenter(vbox);
 
         // Create the scene.
-        Scene sceneMain = new Scene(layoutIntro, 800, 600);
+        Scene sceneMain = new Scene(layout, 800, 600);
         this.setTitle("Introduction");
         this.setScene(sceneMain);
         this.setResizable(false);
