@@ -37,8 +37,7 @@ public class MainMenu extends Stage {
         final int layoutPadding = 10;
         //Spacing from window border to actual layout is 10px every side.
         layoutMainMenu.setPadding(new Insets(layoutPadding));
-
-
+        
         // Button to go to scene with buttons to time lines
         Button buttonIntroduction = new Button();
         buttonIntroduction.setText("Introduction");
@@ -115,6 +114,4 @@ public class MainMenu extends Stage {
         this.setResizable(false);
         this.show();
     }
-
-
 }
