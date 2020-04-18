@@ -3,11 +3,11 @@ package FinalProject;
 import javafx.scene.Group;
 
 
-public class Timeline {
+public class TimelineGraphic {
     private Arrow arrow = new Arrow();
     private Group timeline;
 
-    public Timeline(String[] dates, String[] descriptions) {
+    public TimelineGraphic(String[] dates, String[] descriptions) {
         Group display = new Group();
         final int dateLimit = 5;
         if (dates.length > dateLimit) {
