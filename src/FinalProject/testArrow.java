@@ -2,6 +2,9 @@ package FinalProject;
 
 import org.junit.*;
 
+import javax.swing.*;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -10,13 +13,12 @@ import static org.junit.Assert.assertTrue;
  * @author Gan Ma Gang
  * @version 2020
  */
-public class TimelineGraphicTest {
+public class testArrow {
 
     /**
      * Test object.
      */
-    protected TimelineGraphic testTimelineGraphic;
-    protected TimelineInfo testTimelineIngo;
+    private Arrow test;
 
     /**
      * @throws Exception
@@ -37,8 +39,6 @@ public class TimelineGraphicTest {
      */
     @Before
     public void setUp() throws Exception {
-        testTimelineGraphic = new TimelineGraphic(TimelineInfo.resourceAllocationDates(),
-                TimelineInfo.resourceAllocation());
     }
 
     /**
@@ -46,11 +46,13 @@ public class TimelineGraphicTest {
      */
     @After
     public void tearDown() throws Exception {
-        testTimelineGraphic = null;
+        test = null;
     }
 
     @Test
-    public void testTimelineGraphic() {
-        assertTrue(testTimelineGraphic instanceof TimelineGraphic);
+    public void testTimelineGraphic() throws Exception {
+        test = new Arrow();
+        String compare = test.getClass().getName();
+        assertEquals(compare, "FinalProject.Arrow");
     }
 }
