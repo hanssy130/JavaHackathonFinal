@@ -60,9 +60,9 @@ public class TimelineInfo {
         return new String[] {"December 31", "January 20", "January 25", "January 29", "February 7"};
     }
     public static String[] borderControlDates() {
-        return new String[] {"December 31", "January 20", "January 25", "January 29", "February 7"};
+        return new String[] {"January 22", "January 30", "February 2", "February 3", "February 17"};
     }
     public static String[] communicationDates() {
-        return new String[] {"December 31", "January 20", "January 25", "January 29", "February 7"};
+        return new String[] {"January 22", "February 2", "February 5", "February 11", "February 13"};
     }
 }

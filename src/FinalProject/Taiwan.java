@@ -19,16 +19,15 @@ public class Taiwan extends BouncingBalls {
      * Demonstrates threading in JavaFX.
      */
     public void start() {
-        final int yOffset = 100;
+
         Pane canvas = new Pane();
-        Scene scene = new Scene(canvas, MAX_X, MAX_Y + yOffset);
-        System.out.println("Enter the number of balls: ");
+        Scene scene = new Scene(canvas, MAX_X, MAX_Y + Y_OFFSET);
 
         final int numberOfBalls = 20;
         generateUninfectedBalls(canvas, numberOfBalls, TAIWAN_MOVE_SPEED, TAIWAN_MOVE_SPEED, TAIWAN_INFECTION_DISTANCE);
         generateInfectedBall(canvas, TAIWAN_MOVE_SPEED, TAIWAN_MOVE_SPEED, TAIWAN_INFECTION_DISTANCE);
 
-        this.setTitle("Threads and Balls");
+        this.setTitle("Taiwan Covid-19 Infection Simulation");
         this.setScene(scene);
         this.show();
 
