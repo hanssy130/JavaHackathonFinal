@@ -137,7 +137,7 @@ public class Timelines extends Stage {
 
         // Create the scene.
         Scene sceneMain = new Scene(layoutIntro, 800, 600);
-        this.setTitle("Introduction");
+        this.setTitle("Communication Stage");
         this.setScene(sceneMain);
         this.setResizable(false);
         this.show();
