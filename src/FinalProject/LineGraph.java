@@ -8,7 +8,10 @@ import javafx.scene.chart.XYChart;
 /**
  * A class to make lineGraphs.
  *
+ * @author Brian Duong
+ * @author Hans Sy
  * @author Justin Majam
+ * @author Jason Lui
  * @version 2020.
  */
 public class LineGraph {

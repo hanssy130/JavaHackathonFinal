@@ -8,7 +8,10 @@ import javafx.scene.shape.Rectangle;
 /**
  * A class to make an arrow shape for JavaFX.
  *
+ * @author Brian Duong
+ * @author Hans Sy
  * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class Arrow extends Group {

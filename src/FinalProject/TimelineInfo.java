@@ -3,7 +3,10 @@ package FinalProject;
 /**
  * Holds the information of Taiwan's decisions regarding COVID-19.
  *
- * @author Justin
+ * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class TimelineInfo {

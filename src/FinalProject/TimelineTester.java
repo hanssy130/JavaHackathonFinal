@@ -7,7 +7,10 @@ import javafx.stage.Stage;
 /**
  * Application to ensure timeline could generate.
  *
+ * @author Brian Duong
+ * @author Hans Sy
  * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class TimelineTester extends Application {

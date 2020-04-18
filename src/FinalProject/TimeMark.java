@@ -10,9 +10,12 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
- * TimeMark assists with designing the Timeline Graphic
+ * TimeMark assists with designing the Timeline Graphic.
  *
- * @author Justin
+ * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class TimeMark extends Group {

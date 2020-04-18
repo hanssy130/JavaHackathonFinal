@@ -8,7 +8,10 @@ import static org.junit.Assert.assertEquals;
 /**
  * JUnit test for TimelineGraphic
  *
- * @author Gan Ma Gang
+ * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class TestArrow {

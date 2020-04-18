@@ -19,7 +19,11 @@ import java.io.FileNotFoundException;
 /**
  * Stage of the Main menu.
  * Was supposed to integrate the line graph class to show infection data over time.
+ *
+ * @author Brian Duong
  * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class MainMenu extends Stage {

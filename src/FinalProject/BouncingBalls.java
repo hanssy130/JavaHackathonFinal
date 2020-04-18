@@ -13,7 +13,10 @@ import java.util.Random;
  * BouncingBalls, an introduction to threading and JavaFX.
  *
  * @author BCIT
- * @author Jason Lui (A00930386)
+ * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class BouncingBalls extends Stage {

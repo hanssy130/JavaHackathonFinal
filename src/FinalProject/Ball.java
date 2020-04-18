@@ -10,7 +10,10 @@ import java.util.Random;
  * COVIDBall is a Runnable.  A COVIDBall bounces.
  *
  * @author BCIT
- * @author Jason Lui (A00930386)
+ * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class Ball extends Circle implements Runnable {
