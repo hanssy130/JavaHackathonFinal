@@ -12,6 +12,16 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class TimeMark extends Group {
+    final String buttonSpecs = "-fx-background-radius: 20px;"
+            + "-fx-min-width: 42px; "
+            + "-fx-min-height: 42px; "
+            + "-fx-max-width: 42px; "
+            + "-fx-max-height: 42px;"
+            + "-fx-background-color:#1a1aff ;";
+    private void moveText(Text text, int textYTranslation, int howFarDownCircle, int textOffset) {
+        text.setY(textYTranslation);
+        text.setX(howFarDownCircle - textOffset);
+    }
     public TimeMark(String markName, int howFarDownCircle, String description) {
         final int textYTranslation = 320;
         final int circleYTranslation = 278;
@@ -20,8 +30,7 @@ public class TimeMark extends Group {
         Circle timelineMark = new Circle(howFarDownCircle, circleYTranslation, radius);
         timelineMark.setFill(Color.web("#1a1aff"));
         Text text = new Text(markName);
-        text.setY(textYTranslation);
-        text.setX(howFarDownCircle - textOffset);
+        moveText(text, textYTranslation, howFarDownCircle, textOffset);
         Button clicker = new Button();
         clicker.setStyle("-fx-background-radius: 20px; " +
                 "-fx-min-width: 42px; " +
@@ -37,7 +46,6 @@ public class TimeMark extends Group {
             TaiwanEvent hey = new TaiwanEvent(markName, description);
             StackPane secondaryLayout = new StackPane(hey);
             Scene secondScene = new Scene(secondaryLayout, 400, 300);
-            // New window (Stage)
             Stage newWindow = new Stage();
             newWindow.setTitle("Example Event");
             newWindow.setScene(secondScene);
