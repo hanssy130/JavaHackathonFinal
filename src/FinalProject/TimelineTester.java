@@ -11,13 +11,6 @@ public class TimelineTester extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-//        Arrow tester = new Arrow();
-//        TimeMark testMark = new TimeMark("Dec 31",50);
-//        TimeMark testMark2 = new TimeMark("Jan 20",200);
-//        TimeMark testMark3 = new TimeMark("Jan 25",350);
-//        TimeMark testMark4 = new TimeMark("Jan 29",500);
-//        TimeMark testMark5 = new TimeMark("Feb 7",650);
-//        Group display = new Group(tester, testMark, testMark2, testMark3, testMark4, testMark5);
         String[] stuff = {"yes", "fam"};
         String[] describe = {"stuff happened", "stuff happened again"};
         TimelineGraphic test = new TimelineGraphic(stuff, describe);
