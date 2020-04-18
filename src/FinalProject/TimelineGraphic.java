@@ -4,6 +4,7 @@ import javafx.scene.Group;
 
 /**
  * Makes a timeline with upto 5 items.
+ *
  * @author Justin Majam
  * @version 2020
  */
@@ -12,7 +13,8 @@ public class TimelineGraphic {
 
     /**
      * The constructor.
-     * @param dates A string array for dates.
+     *
+     * @param dates        A string array for dates.
      * @param descriptions A string array for descriptions
      * @pre params must be arrays of equal length.
      * @pre both arrays must be <=5.
@@ -41,6 +43,7 @@ public class TimelineGraphic {
 
     /**
      * Gets the timeline.
+     *
      * @return A group for the timeline.
      */
     public Group getTimeline() {

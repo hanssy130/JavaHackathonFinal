@@ -38,7 +38,8 @@ public class Ball extends Circle implements Runnable {
         dy = GENERATOR.nextInt(MAX_VERTICAL_SPEED + 1); // change in y (0 - 5 pixels)
     }
 
-    public Ball() { }
+    public Ball() {
+    }
 
     /**
      * Bounces the COVIDBall perpetually.

@@ -1,17 +1,11 @@
 package FinalProject;
 
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import javafx.stage.Modality;
-import javafx.stage.Stage;
-
-import java.util.Scanner;
 
 /**
  * @author Jason Lui (A00930386)
@@ -43,7 +37,6 @@ public class Taiwan extends BouncingBalls {
         buttonExit.setLayoutY(200);
 
 
-
         Button buttonNextSimulation = new Button();
         buttonNextSimulation.setText("Next Simulation");
         buttonNextSimulation.setOnAction(actionEvent -> {
@@ -55,14 +48,11 @@ public class Taiwan extends BouncingBalls {
         canvas.getChildren().addAll(buttonNextSimulation, border, buttonExit);
 
 
-
         Scene scene = new Scene(canvas, MAX_X, MAX_Y + Y_OFFSET);
 
         final int numberOfBalls = 20;
         generateUninfectedBalls(canvas, numberOfBalls, TAIWAN_MOVE_SPEED, TAIWAN_MOVE_SPEED, TAIWAN_INFECTION_DISTANCE);
         generateInfectedBall(canvas, TAIWAN_MOVE_SPEED, TAIWAN_MOVE_SPEED, TAIWAN_INFECTION_DISTANCE);
-
-
 
 
         this.initModality(Modality.APPLICATION_MODAL);

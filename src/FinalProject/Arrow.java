@@ -7,6 +7,7 @@ import javafx.scene.shape.Rectangle;
 
 /**
  * A class to make an arrow shape for JavaFX.
+ *
  * @author Justin Majam
  * @version 2020
  */
