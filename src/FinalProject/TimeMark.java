@@ -57,6 +57,7 @@ public class TimeMark extends Group {
         TaiwanEvent hey = new TaiwanEvent(markName, description);
         StackPane secondaryLayout = new StackPane(hey);
         Scene secondScene = new Scene(secondaryLayout, popUpWidth, popUpHeight);
+        secondScene.setFill(Color.rgb(173, 216, 230));
         Stage newWindow = new Stage();
         newWindow.setTitle("Event");
         newWindow.setScene(secondScene);
