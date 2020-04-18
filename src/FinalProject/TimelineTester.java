@@ -11,7 +11,7 @@ public class TimelineTester extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        String[] stuff = {"yes", "fam"};
+        String[] stuff = {"yes", "family"};
         String[] describe = {"stuff happened", "stuff happened again"};
         TimelineGraphic test = new TimelineGraphic(stuff, describe);
         Scene scene = new Scene(test.getTimeline(), 800,  600);
