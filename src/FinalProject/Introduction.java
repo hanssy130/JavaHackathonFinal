@@ -5,7 +5,11 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.*;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -30,12 +34,13 @@ public class Introduction extends Stage {
         // Introduction info
         title = new Label("Introduction");
         title.setFont(new Font("Arial", 50));
-        information = new Text("During the epidemic of COVID-19, each country’s response has had dramatic impacts " +
-                "on how well they dealt with the crisis. Taiwan is one of the top performers, if not the best, in " +
-                "preventing the outbreak from getting out of hand, unlike the USA and Italy. Our project an " +
-                "informative application that educates the masses on how Taiwan was able to accomplish such a feat.\n" +
-                "\n" +
-                "Presented by Brian, Hans, Jason, and Justin");
+        information = new Text("During the epidemic of COVID-19, each country’s response "
+                + "has had dramatic impacts on how well they dealt with the crisis. Taiwan is "
+                + "one of the top performers, if not the best, in preventing the outbreak from "
+                + "getting out of hand, unlike the USA and Italy. Our project an informative "
+                + "application that educates the masses on how Taiwan was able to accomplish "
+                + "such a feat. \n\n"
+                + "Presented by Brian, Hans, Jason, and Justin");
         information.setWrappingWidth(550);
         information.setFont(new Font("Arial", 16));
 
