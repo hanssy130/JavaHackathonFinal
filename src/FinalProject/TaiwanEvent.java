@@ -5,6 +5,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 public class TaiwanEvent extends Group {
@@ -17,7 +18,10 @@ public class TaiwanEvent extends Group {
         this.description = description;
 
         Text eventDate = new Text(date);
+        eventDate.setFont(new Font(20));
         Text eventDescription = new Text(description);
+        eventDescription.setWrappingWidth(550);
+        eventDescription.setFont(new Font(16));
         VBox stackPane = new VBox(eventDate, eventDescription);
         final int spacing = 15;
         final int inset = 15;

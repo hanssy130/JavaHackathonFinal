@@ -1,7 +1,10 @@
 package FinalProject;
 
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 import java.util.Scanner;
@@ -17,35 +20,41 @@ public class USA extends BouncingBalls {
 
     /**
      * Demonstrates threading in JavaFX.
-     *
-     * @param primaryStage contains the Scene
      */
-    public void start(Stage primaryStage) {
-        Pane canvas = new Pane();
-        Scene scene = new Scene(canvas, MAX_X, MAX_Y);
-        System.out.println("Enter the number of balls: ");
-        Scanner scanner = new Scanner(System.in);
+    public void start() {
 
-        int numberOfBalls = scanner.nextInt();
+        Line border = new Line(0, 600, 600, 600);
+        border.setStrokeWidth(3);
+
+        Button buttonExit = new Button();
+        buttonExit.setText("Return");
+        buttonExit.setOnAction(actionEvent -> {
+            this.close();
+        });
+
+        Button buttonNextSimulation = new Button();
+        buttonNextSimulation.setText("Next Simulation");
+        buttonNextSimulation.setOnAction(actionEvent -> {
+            new Taiwan().start();
+            this.close();
+        });
+
+        BorderPane canvas = new BorderPane();
+        canvas.getChildren().addAll(border);
+
+
+        Scene scene = new Scene(canvas, MAX_X, MAX_Y + Y_OFFSET);
+
+        final int numberOfBalls = 20;
         generateUninfectedBalls(canvas, numberOfBalls, USA_MOVE_SPEED, USA_MOVE_SPEED, USA_INFECTION_DISTANCE);
         generateInfectedBall(canvas, USA_MOVE_SPEED, USA_MOVE_SPEED, USA_INFECTION_DISTANCE);
 
-        primaryStage.setTitle("Threads and Balls");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        this.setTitle("Threads and Balls");
+        this.setScene(scene);
+        this.show();
 
         threadBalls();
     }
 
-//    /**
-//     * Launches the JavaFX application.  We still need a main method in our
-//     * JavaFX applications.  The main method must do one thing.  Pass
-//     * the command line arguments (args) to the launch method inherited from
-//     * the Application class.
-//     *
-//     * @param args command line arguments
-//     */
-//    public static void main(String[] args) {
-//        launch(args);
-//    }
+
 }

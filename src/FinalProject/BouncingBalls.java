@@ -80,8 +80,7 @@ public class BouncingBalls extends Stage {
     public void start() {
         Pane canvas = new Pane();
         Scene scene = new Scene(canvas, MAX_X, MAX_Y);
-        System.out.println("Enter the number of balls: ");
-        Scanner scanner = new Scanner(System.in);
+
         final int numberOfBalls = 20;
 
         for (int i = 0; i < numberOfBalls; i++) {

@@ -9,6 +9,11 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * TimeMark assists with designing the Timeline Graphic
+ * @author Justin
+ * @version 2020
+ */
 public class TimeMark extends Group {
     private final String buttonSpecs = "-fx-background-radius: 20px;"
             + "-fx-min-width: 42px; "
@@ -17,6 +22,12 @@ public class TimeMark extends Group {
             + "-fx-max-height: 42px;"
             + "-fx-background-color:#1a1aff ;";
 
+    /**
+     * Object constructor of TimeMark
+     * @param markName a String
+     * @param howFarDownCircle an Int
+     * @param description a String
+     */
     public TimeMark(String markName, int howFarDownCircle, String description) {
         final int circleYTranslation = 278;
         final int radius = 20;
@@ -33,6 +44,11 @@ public class TimeMark extends Group {
         getChildren().addAll(text, timelineMark, clicker);
     }
 
+    /**
+     * Pushes the text down the line
+     * @param text a Text object
+     * @param howFarDownCircle an int
+     */
     private void moveText(Text text, int howFarDownCircle) {
         final int textYTranslation = 320;
         final int textOffset = 30;
@@ -40,6 +56,11 @@ public class TimeMark extends Group {
         text.setX(howFarDownCircle - textOffset);
     }
 
+    /**
+     * Styles the button.
+     * @param clicker a Button object
+     * @param howFarDownCircle an int
+     */
     private void buttonStyler(Button clicker, int howFarDownCircle) {
         final int textYTranslation = 320;
         final int buttonOffsetY = 63;
@@ -49,6 +70,12 @@ public class TimeMark extends Group {
         clicker.setTranslateX(howFarDownCircle - buttonOffSetX);
     }
 
+    /**
+     * Creates the stage.
+     * @param markName a String
+     * @param description a String
+     * @return a Stage object
+     */
     private Stage makePopUp(String markName, String description) {
         final int popUpWidth = 600;
         final int popUpHeight = 480;
