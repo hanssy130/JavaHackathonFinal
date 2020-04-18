@@ -4,6 +4,11 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * Application to ensure timeline could generate.
+ * @author Justin Majam
+ * @version 2020
+ */
 public class TimelineTester extends Application {
     public static void main(String[] args) {
         launch(args);
