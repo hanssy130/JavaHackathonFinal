@@ -1,6 +1,10 @@
 # JavaHackathonFinal
 In these unprecedented times, our instructors have decided to give us a HACKATHON for a final! We are creating a Java application using what we learned in class.
 
+# Project Name: Taiwan #1
+
+During the epidemic of COVID-19, each country’s response has had dramatic impacts on how well they dealt with the crisis. Taiwan is one of the top performers, if not the best, in preventing the outbreak from getting out of hand, unlike the USA and Italy. Our idea is to create an informative JavaFX application that educates users on how Taiwan was able to accomplish such a feat.
+
 # Team 干嘛 (Gan Ma) Gang
 
 ![GanMaGang](http://3770.liulinmall.com/vod/2018-08-07/5b68be8a7af8f.jpg)
