@@ -9,7 +9,6 @@ import javafx.scene.Group;
  * @version 2020
  */
 public class TimelineGraphic {
-    private Arrow arrow = new Arrow();
     private Group timeline;
 
     /**
@@ -28,6 +27,7 @@ public class TimelineGraphic {
         if (dates.length > dateLimit) {
             throw new IllegalArgumentException("Maximum dates per timeline!");
         }
+        Arrow arrow = new Arrow();
         display.getChildren().add(arrow);
         int distance = distanceDefault;
         int counter = 0;

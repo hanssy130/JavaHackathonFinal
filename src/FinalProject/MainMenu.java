@@ -18,12 +18,11 @@ import java.io.FileNotFoundException;
 
 /**
  * Stage of the Main menu.
- *
+ * Was supposed to integrate the line graph class to show infection data over time.
  * @author Hans Sy
  * @version 2020
  */
 public class MainMenu extends Stage {
-
     public void firstStage() {
         BorderPane layoutMainMenu = new BorderPane();
         final int red = 173;
