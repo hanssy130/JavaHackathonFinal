@@ -13,7 +13,7 @@ import static org.junit.Assert.assertTrue;
  * @author Gan Ma Gang
  * @version 2020
  */
-public class testArrow {
+public class TestArrow {
 
     /**
      * Test object.
