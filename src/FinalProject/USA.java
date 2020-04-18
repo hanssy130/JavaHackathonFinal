@@ -3,14 +3,15 @@ package FinalProject;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
-import javafx.stage.Stage;
-
-import java.util.Scanner;
 
 /**
- * @author Jason Lui (A00930386)
+ * USA.
+ *
+ * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class USA extends BouncingBalls {

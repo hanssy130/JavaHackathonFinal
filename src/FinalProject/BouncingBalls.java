@@ -1,7 +1,6 @@
 package FinalProject;
 
 
-import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -9,13 +8,15 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
 
 /**
  * BouncingBalls, an introduction to threading and JavaFX.
  *
  * @author BCIT
- * @author Jason Lui (A00930386)
+ * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class BouncingBalls extends Stage {

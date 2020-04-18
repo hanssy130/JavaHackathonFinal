@@ -3,13 +3,17 @@ package FinalProject;
 /**
  * Holds the information of Taiwan's decisions regarding COVID-19.
  *
- * @author Justin
+ * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class TimelineInfo {
 
     /**
      * Holds the description of actions regarding Resource Allocation.
+     *
      * @return an array of Strings.
      */
     public static String[] resourceAllocation() {
@@ -45,10 +49,11 @@ public class TimelineInfo {
 
     /**
      * Holds the description of actions regarding Border Control, Travel, & Finding Cases Timeline.
+     *
      * @return an array of Strings.
      */
     public static String[] borderControlStage() {
-        return new String[] {"Taiwan starts inspecting passengers for coronavirus.",
+        return new String[]{"Taiwan starts inspecting passengers for coronavirus.",
                 "Taiwans sets Level 2 and Level 3 travel alerts to anyone coming/going to China",
                 "Taiwan suspends all tours to China",
                 "Electronic monitoring of quarantined individuals via government-issued cellphones",
@@ -57,45 +62,49 @@ public class TimelineInfo {
 
     /**
      * Holds the description of actions regarding Communication.
+     *
      * @return an array of Strings.
      */
     public static String[] communicationsStage() {
-        return new String[] {"Taiwan enforces a new policy that people who spread fake news on epidemic"
+        return new String[]{"Taiwan enforces a new policy that people who spread fake news on epidemic"
                 + " can be fined up to NT$3 million (USD $100,000)",
                 "Government extended school winter break from Feb 15 to Feb 25",
                 "Public servants given 14-days of unpaid leave to care for children"
-                + " under 12 if reason is due to coronavirus between Feb 11-24.",
+                        + " under 12 if reason is due to coronavirus between Feb 11-24.",
                 "Criminal Investigation Bureau questioned suspects on spreading a rumor of a toilet"
-                + " paper shortage due to face mask production, sparking a toilet paper panic.",
+                        + " paper shortage due to face mask production, sparking a toilet paper panic.",
                 "NT$60 billion (USD $2 billion) allocated for businesses affected by the epidemic.",
                 "Taiwan announces that they'll disinfect public spaces around schools and school "
-                + "areas open to the public during winter break. The Ministry of Education announced"
-                + " student absences due to fever or respiratory symptoms will not count on students’"
-                + " attendance records."
+                        + "areas open to the public during winter break. The Ministry of Education announced"
+                        + " student absences due to fever or respiratory symptoms will not count on students’"
+                        + " attendance records."
         };
     }
 
     /**
      * Holds the dates of the resource allocation events.
+     *
      * @return an array of Strings.
      */
     public static String[] resourceAllocationDates() {
-        return new String[] {"December 31", "January 20", "January 25", "January 29", "February 7"};
+        return new String[]{"December 31", "January 20", "January 25", "January 29", "February 7"};
     }
 
     /**
      * Holds the dates of the border control events.
+     *
      * @return an array of Strings.
      */
     public static String[] borderControlDates() {
-        return new String[] {"January 22", "January 30", "February 2", "February 3", "February 17"};
+        return new String[]{"January 22", "January 30", "February 2", "February 3", "February 17"};
     }
 
     /**
      * Holds the dates of the communication events.
+     *
      * @return an array of Strings.
      */
     public static String[] communicationDates() {
-        return new String[] {"January 22", "February 2", "February 5", "February 11", "February 13"};
+        return new String[]{"January 22", "February 2", "February 5", "February 11", "February 13"};
     }
 }

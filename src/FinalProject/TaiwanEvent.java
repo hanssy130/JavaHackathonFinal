@@ -3,11 +3,19 @@ package FinalProject;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+/**
+ * TaiwanEvent.
+ *
+ * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
+ * @version 2020
+ */
 public class TaiwanEvent extends Group {
 
     private String date;

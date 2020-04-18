@@ -4,16 +4,20 @@ import javafx.scene.Group;
 
 /**
  * Makes a timeline with upto 5 items.
+ *
+ * @author Brian Duong
+ * @author Hans Sy
  * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class TimelineGraphic {
-    private Arrow arrow = new Arrow();
     private Group timeline;
 
     /**
      * The constructor.
-     * @param dates A string array for dates.
+     *
+     * @param dates        A string array for dates.
      * @param descriptions A string array for descriptions
      * @pre params must be arrays of equal length.
      * @pre both arrays must be <=5.
@@ -26,6 +30,7 @@ public class TimelineGraphic {
         if (dates.length > dateLimit) {
             throw new IllegalArgumentException("Maximum dates per timeline!");
         }
+        Arrow arrow = new Arrow();
         display.getChildren().add(arrow);
         int distance = distanceDefault;
         int counter = 0;
@@ -41,6 +46,7 @@ public class TimelineGraphic {
 
     /**
      * Gets the timeline.
+     *
      * @return A group for the timeline.
      */
     public Group getTimeline() {

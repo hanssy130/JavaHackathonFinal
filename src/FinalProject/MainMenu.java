@@ -7,12 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -23,12 +18,15 @@ import java.io.FileNotFoundException;
 
 /**
  * Stage of the Main menu.
+ * Was supposed to integrate the line graph class to show infection data over time.
  *
+ * @author Brian Duong
  * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class MainMenu extends Stage {
-
     public void firstStage() {
         BorderPane layoutMainMenu = new BorderPane();
         final int red = 173;
@@ -38,7 +36,7 @@ public class MainMenu extends Stage {
                 new BackgroundFill(Color.rgb(red, green, blue),
                         CornerRadii.EMPTY,
                         Insets.EMPTY
-                        )));
+                )));
 
         final int layoutPadding = 10;
         //Spacing from window border to actual layout is 10px every side.

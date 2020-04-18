@@ -12,7 +12,12 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
+ * Coronavirus Disease 2019.
+ *
  * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class Covid19 extends Stage {

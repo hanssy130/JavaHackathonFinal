@@ -13,7 +13,10 @@ import javafx.stage.Stage;
 /**
  * Holds the different Timeline Stages.
  *
+ * @author Brian Duong
  * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class Timelines extends Stage {
