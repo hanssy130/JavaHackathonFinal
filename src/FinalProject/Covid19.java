@@ -38,8 +38,8 @@ public class Covid19 extends Stage {
                 "mild illnesses, similar to the common cold.\n" +
                 "\n COVID-19 is a new disease that has not been previously identified in humans. Rarely, animal " +
                 "coronaviruses can infect people, and more rarely, these can then spread from person to person through " +
-                "close contact.\n\n Clicking the simulation link below creates an example of how COVID-19 can spread" +
-                " from person to person.\n\n");
+                "close contact.\n\n Clicking the simulation link below creates an example of how COVID-19 spreads in Taiwan" +
+                " from person to person. Click the next button for a simulation of the infection in the United States.\n\n");
         information.setWrappingWidth(550);
         information.setFont(new Font("Arial", 16));
 
