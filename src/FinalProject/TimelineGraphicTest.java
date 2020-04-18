@@ -16,7 +16,6 @@ public class TimelineGraphicTest {
      * Test object.
      */
     protected TimelineGraphic testTimelineGraphic;
-    protected TimelineInfo testTimelineIngo;
 
     /**
      * @throws Exception
