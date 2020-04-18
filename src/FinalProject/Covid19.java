@@ -17,6 +17,9 @@ import javafx.stage.Stage;
  */
 public class Covid19 extends Stage {
 
+    /**
+     * Stage for Covid-19 page.
+     */
     public void covid19Stage() {
         // Pane Setup
         BorderPane layout = new BorderPane();
@@ -33,10 +36,10 @@ public class Covid19 extends Stage {
         Text information = new Text("Coronaviruses are a large family of viruses. Some cause illness in people and " +
                 "others cause illness in animals. Human coronaviruses are common and are typically associated with " +
                 "mild illnesses, similar to the common cold.\n" +
-                "\n" +
-                "COVID-19 is a new disease that has not been previously identified in humans. Rarely, animal " +
+                "\n COVID-19 is a new disease that has not been previously identified in humans. Rarely, animal " +
                 "coronaviruses can infect people, and more rarely, these can then spread from person to person through " +
-                "close contact.\n");
+                "close contact.\n\n Clicking the simulation link below creates an example of how COVID-19 can spread" +
+                " from person to person.\n\n");
         information.setWrappingWidth(550);
         information.setFont(new Font("Arial", 16));
 
@@ -52,7 +55,8 @@ public class Covid19 extends Stage {
         Button buttonSimulation = new Button();
         buttonSimulation.setText("Contagious Virus Simulation");
         buttonSimulation.setOnAction(actionEvent -> {
-            System.out.println("Currently has no functionality");
+            new Taiwan().start();
+
         });
 
         HBox bottomContent = new HBox();

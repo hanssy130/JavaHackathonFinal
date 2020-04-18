@@ -15,12 +15,24 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * Features the stage of the Introduction.
+ *
+ * @author Hans Sy
+ * @version 2020
+ */
 public class Introduction extends Stage {
 
+    // Holds the title.
     private Label title;
+    // Holds the information.
     private Text information;
+    // Holds the back button.
     private Button btnBack;
 
+    /**
+     * Creates the stage of the Introduction.
+     */
     public void introductionStage() {
         // Pane Setup
         BorderPane layoutIntro = new BorderPane();
