@@ -1,5 +1,7 @@
 package FinalProject;
 
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -17,6 +19,11 @@ public class TaiwanEvent extends Group {
         Text eventDate = new Text(date);
         Text eventDescription = new Text(description);
         VBox stackPane = new VBox(eventDate, eventDescription);
+        final int spacing = 15;
+        final int inset = 15;
+        stackPane.setSpacing(spacing);
+        stackPane.setPadding(new Insets(inset, 0, 0, 0));
+        stackPane.setAlignment(Pos.CENTER);
 
         getChildren().addAll(stackPane);
     }

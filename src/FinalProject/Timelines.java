@@ -42,6 +42,12 @@ public class Timelines extends Stage {
         VBox vbox = new VBox();
         vbox.getChildren().addAll(title, test.getTimeline(), btnBack);
         layoutIntro.setCenter(vbox);
+        final int spacing = 15;
+        final int inset = 15;
+        vbox.setSpacing(spacing);
+        vbox.setPadding(new Insets(inset, 0, 0, 0));
+        vbox.setAlignment(Pos.CENTER);
+
 
         // Create the scene.
         Scene sceneMain = new Scene(layoutIntro, 800, 600);
@@ -80,6 +86,11 @@ public class Timelines extends Stage {
         vbox.getChildren().addAll(title, test.getTimeline(), btnBack);
         vbox.setAlignment(Pos.TOP_LEFT);
         layoutIntro.setCenter(vbox);
+        final int spacing = 15;
+        final int inset = 15;
+        vbox.setSpacing(spacing);
+        vbox.setPadding(new Insets(inset, 0, 0, 0));
+        vbox.setAlignment(Pos.CENTER);
 
         // Create the scene.
         Scene sceneMain = new Scene(layoutIntro, 800, 600);
@@ -118,6 +129,11 @@ public class Timelines extends Stage {
         vbox.getChildren().addAll(title, test.getTimeline(), btnBack);
         vbox.setAlignment(Pos.TOP_LEFT);
         layoutIntro.setCenter(vbox);
+        final int spacing = 15;
+        final int inset = 15;
+        vbox.setSpacing(spacing);
+        vbox.setPadding(new Insets(inset, 0, 0, 0));
+        vbox.setAlignment(Pos.CENTER);
 
         // Create the scene.
         Scene sceneMain = new Scene(layoutIntro, 800, 600);
