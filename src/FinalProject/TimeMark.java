@@ -24,7 +24,7 @@ public class TimeMark extends Group {
         text.setX(howFarDownCircle - textOffset);
     }
 
-    private void buttonStyler(Button clicker, int howFarDownCircle ) {
+    private void buttonStyler(Button clicker, int howFarDownCircle) {
         final int textYTranslation = 320;
         final int buttonOffsetY = 63;
         final int buttonOffSetX = 20;
