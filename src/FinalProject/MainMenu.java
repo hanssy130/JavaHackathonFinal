@@ -23,7 +23,7 @@ import java.io.FileNotFoundException;
 
 /**
  * Stage of the Main menu.
- * 
+ *
  * @author Hans Sy
  * @version 2020
  */
