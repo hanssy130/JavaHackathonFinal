@@ -94,7 +94,7 @@ public class Timelines extends Stage {
         layoutIntro.setPadding(new Insets(10));
 
         title = new Label("Communications Timeline");
-
+        title.setFont(new Font("Arial", 20));
 
         // Back button
         btnBack = new Button("Back");
