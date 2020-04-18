@@ -1,29 +1,27 @@
-package test;
+package FinalProject;
 
 import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 
 
-public class Timeline {
+public class TimelineGraphic {
     private Arrow arrow = new Arrow();
-    private String[] dates;
     private Group timeline;
 
-    public Timeline(String[] dates) {
+    public TimelineGraphic(String[] dates, String[] descriptions) {
         Group display = new Group();
         final int dateLimit = 5;
         if (dates.length > dateLimit) {
             throw new IllegalArgumentException("Maximum dates per timeline!");
         }
-        this.dates = dates;
         display.getChildren().add(arrow);
         int distance = 50;
+        int counter = 0;
         final int distanceBetweenBalls = 150;
         for (String date : dates) {
-            TimeMark testMark = new TimeMark(date, distance);
+            TimeMark testMark = new TimeMark(date, distance, descriptions[counter]);
             display.getChildren().add(testMark);
             distance += distanceBetweenBalls;
+            counter++;
         }
         timeline = display;
     }
@@ -32,8 +30,4 @@ public class Timeline {
         return timeline;
     }
 
-    public static void main(String[] args) {
-        String[] stuff = {"yes", "fam"};
-        Timeline test = new Timeline(stuff);
-    }
 }
