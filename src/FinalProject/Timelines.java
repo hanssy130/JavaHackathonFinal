@@ -10,11 +10,22 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+/**
+ * Holds the different Timeline Stages.
+ *
+ * @author Hans Sy
+ * @version 2020
+ */
 public class Timelines extends Stage {
 
+    // Holds the title
     private Label title;
+    // Holds the back Button
     private Button btnBack;
 
+    /**
+     * Border Control Stage.
+     */
     public void borderControlStage() {
         // Pane Setup
         BorderPane layoutIntro = new BorderPane();
@@ -57,6 +68,9 @@ public class Timelines extends Stage {
         this.show();
     }
 
+    /**
+     * Resource Allocation Stage.
+     */
     public void resourceAllocationStage() {
         // Pane Setup
         BorderPane layoutIntro = new BorderPane();
@@ -100,6 +114,9 @@ public class Timelines extends Stage {
         this.show();
     }
 
+    /**
+     * Creates the Communications Stage.
+     */
     public void communicationsStage() {
         // Pane Setup
         BorderPane layoutIntro = new BorderPane();
