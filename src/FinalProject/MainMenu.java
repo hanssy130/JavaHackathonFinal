@@ -7,7 +7,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -85,10 +90,12 @@ public class MainMenu extends Stage {
             e.printStackTrace();
         }
         ImageView imgView = new ImageView(taiwanImage);
-        imgView.setY(100);
+        final int imageY = 100;
+        imgView.setY(imageY);
 
+        final int verticalSpacing = 10;
         //The VBox for all of the items going in the center of the BorderPane
-        VBox centerContent = new VBox(10);
+        VBox centerContent = new VBox(verticalSpacing);
         centerContent.getChildren().addAll(introduction, imgView, buttonIntroduction, buttonCovid19,
                 buttonTimelines);
         final int spacing = 15;
@@ -98,7 +105,10 @@ public class MainMenu extends Stage {
         centerContent.setAlignment(Pos.CENTER);
         layoutMainMenu.setCenter(centerContent);
 
-        Scene sceneMain = new Scene(layoutMainMenu, 800, 600);
+        final int maxX = 800;
+        final int maxY = 600;
+
+        Scene sceneMain = new Scene(layoutMainMenu, maxX, maxY);
 
         this.setTitle("Main Menu");
         this.setScene(sceneMain);
