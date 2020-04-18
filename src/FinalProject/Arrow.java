@@ -1,4 +1,4 @@
-package test;
+package FinalProject;
 
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
