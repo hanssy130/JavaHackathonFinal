@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 /**
  * TimeMark assists with designing the Timeline Graphic
+ *
  * @author Justin
  * @version 2020
  */
@@ -24,9 +25,10 @@ public class TimeMark extends Group {
 
     /**
      * Object constructor of TimeMark
-     * @param markName a String
+     *
+     * @param markName         a String
      * @param howFarDownCircle an Int
-     * @param description a String
+     * @param description      a String
      */
     public TimeMark(String markName, int howFarDownCircle, String description) {
         final int circleYTranslation = 278;
@@ -46,7 +48,8 @@ public class TimeMark extends Group {
 
     /**
      * Pushes the text down the line
-     * @param text a Text object
+     *
+     * @param text             a Text object
      * @param howFarDownCircle an int
      */
     private void moveText(Text text, int howFarDownCircle) {
@@ -58,7 +61,8 @@ public class TimeMark extends Group {
 
     /**
      * Styles the button.
-     * @param clicker a Button object
+     *
+     * @param clicker          a Button object
      * @param howFarDownCircle an int
      */
     private void buttonStyler(Button clicker, int howFarDownCircle) {
@@ -72,7 +76,8 @@ public class TimeMark extends Group {
 
     /**
      * Creates the stage.
-     * @param markName a String
+     *
+     * @param markName    a String
      * @param description a String
      * @return a Stage object
      */

@@ -39,11 +39,11 @@ public class COVIDBall extends Ball {
     /**
      * Constructs an object of type COVIDBall. test
      *
-     * @param xPosition double
-     * @param yPosition double
-     * @param xMaxSpeed int
-     * @param yMaxSpeed int
-     * @param infected boolean
+     * @param xPosition         double
+     * @param yPosition         double
+     * @param xMaxSpeed         int
+     * @param yMaxSpeed         int
+     * @param infected          boolean
      * @param infectionDistance int
      */
     public COVIDBall(int xPosition, int yPosition, int xMaxSpeed, int yMaxSpeed, boolean infected, int infectionDistance) {

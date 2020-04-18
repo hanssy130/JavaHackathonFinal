@@ -7,15 +7,17 @@ import javafx.scene.chart.XYChart;
 
 /**
  * A class to make lineGraphs.
+ *
  * @author Justin Majam
  * @version 2020.
  */
 public class LineGraph {
     /**
      * Inserts data into a graph's series.
+     *
      * @param series A series for an XYChart.
-     * @param xAxis A string for the X axis.
-     * @param yAxis An int for the Y axis.
+     * @param xAxis  A string for the X axis.
+     * @param yAxis  An int for the Y axis.
      */
     private void insert(XYChart.Series<String, Number> series, String xAxis, int yAxis) {
         series.getData().add(new XYChart.Data<>(xAxis, yAxis));
@@ -23,15 +25,16 @@ public class LineGraph {
 
     /**
      * Makes a LineGraph with inputted data.
-     * @param xLabel A string for the x Axis Label.
-     * @param yLabel A string for the y Axis Label.
-     * @param name A string for the graph name.
+     *
+     * @param xLabel    A string for the x Axis Label.
+     * @param yLabel    A string for the y Axis Label.
+     * @param name      A string for the graph name.
      * @param lineLabel A label for the line.
-     * @param xData An array of Strings for the X axis.
-     * @param yData An array of ints for the Y axis.
+     * @param xData     An array of Strings for the X axis.
+     * @param yData     An array of ints for the Y axis.
+     * @return A completed line graph.
      * @pre both arrays must be the same length.
      * @post A completed line graph.
-     * @return A completed line graph.
      */
     public LineChart<String, Number> makeGraph(
             String xLabel, String yLabel, String name,
@@ -49,7 +52,7 @@ public class LineGraph {
         series.setName(lineLabel);
         //populating the series with data
         int counter = 0;
-        for (String data: xData) {
+        for (String data : xData) {
             insert(series, data, yData[counter]);
             counter++;
         }
