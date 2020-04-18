@@ -12,7 +12,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class TimeMark extends Group {
-    public TimeMark(String markName, int howFarDownCircle) {
+    public TimeMark(String markName, int howFarDownCircle, String description) {
         final int textYTranslation = 320;
         final int circleYTranslation = 278;
         final int textOffset = 16;

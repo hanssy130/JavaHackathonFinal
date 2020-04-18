@@ -35,10 +35,13 @@ public class Timelines extends Stage {
             this.close();
         });
 
+        String[] stuff = {"yes", "fam"};
+        String[] describe = {"stuff happened", "stuff happened again"};
+        TimelineGraphic test = new TimelineGraphic(stuff, describe);
+
         // Use Vbox to stack vertically.
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(title, btnBack);
-        vbox.setAlignment(Pos.TOP_LEFT);
+        vbox.getChildren().addAll(title, test.getTimeline(), btnBack);
         layoutIntro.setCenter(vbox);
 
         // Create the scene.
