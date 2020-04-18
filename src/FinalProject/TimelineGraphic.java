@@ -25,9 +25,7 @@ public class TimelineGraphic {
         }
         timeline = display;
     }
-
     public Group getTimeline() {
         return timeline;
     }
-
 }
