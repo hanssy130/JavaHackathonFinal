@@ -1,5 +1,7 @@
 package FinalProject;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -7,12 +9,17 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.awt.*;
+import java.io.FileInputStream;
 
 public class TimelineMenu extends Stage {
 
@@ -28,8 +35,16 @@ public class TimelineMenu extends Stage {
     // Back button
     private Button btnBack;
 
+    private Label title;
+    private Text information;
+
 
     public void timeLineStage() {
+        // Introduction info
+        title = new Label("Timeline of Events");
+        title.setFont(new javafx.scene.text.Font("Arial", 50));
+        information = new Text("Click on a timeline to explore Taiwan's responses in each area.");
+        information.setFont(new Font("Arial", 16));
 
         // Initializes the buttons
         btnBorderControl = new Button("Actions on Border Control, Travel, & Finding Cases");
@@ -92,7 +107,7 @@ public class TimelineMenu extends Stage {
         });
 
         // Controls the buttons' spacing & alignment
-        VBox buttons = new VBox(btnBorderControl, btnResourceAllocation, btnCommunication, btnBack);
+        VBox buttons = new VBox(title, information, btnBorderControl, btnResourceAllocation, btnCommunication, btnBack);
         final int spacing = 15;
         final int inset = 15;
         buttons.setSpacing(spacing);

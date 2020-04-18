@@ -5,20 +5,18 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 public class MainMenu extends Stage {
-
-
 
     public void firstStage() {
         BorderPane layoutMainMenu = new BorderPane();
@@ -47,7 +45,7 @@ public class MainMenu extends Stage {
         Button buttonCovid19 = new Button();
         buttonCovid19.setText("What is Covid-19?");
         buttonCovid19.setOnAction(actionEvent -> {
-            new Covid19().info();
+            new Covid19().covid19Stage();
             this.close();
         });
 
@@ -74,24 +72,33 @@ public class MainMenu extends Stage {
 
         layoutMainMenu.setTop(menuTop);
 
-
         Text introduction = new Text();
         introduction.setText("How Taiwan Contained an Epidemic Virus Better Than the Rest");
         final int textSize = 16;
         introduction.setFont(new Font(textSize));
 
+        //Image
+        Image taiwanImage = null;
+        try {
+            taiwanImage = new Image(new FileInputStream("resources/taiwanImage.png"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        ImageView imgView = new ImageView(taiwanImage);
+        imgView.setY(100);
+
         //The VBox for all of the items going in the center of the BorderPane
-        final int vBoxVerticalSpacing = 10;
-        VBox centerContent = new VBox(vBoxVerticalSpacing);
-        centerContent.getChildren().addAll(introduction, buttonIntroduction, buttonCovid19,
+        VBox centerContent = new VBox(10);
+        centerContent.getChildren().addAll(introduction, imgView, buttonIntroduction, buttonCovid19,
                 buttonTimelines);
-        centerContent.setAlignment(Pos.TOP_CENTER);
+        final int spacing = 15;
+        final int inset = 15;
+        centerContent.setSpacing(spacing);
+        centerContent.setPadding(new Insets(inset, 0, 0, 0));
+        centerContent.setAlignment(Pos.CENTER);
         layoutMainMenu.setCenter(centerContent);
 
-        final int maxX = 800;
-        final int maxY = 600;
-
-        Scene sceneMain = new Scene(layoutMainMenu, maxX, maxY);
+        Scene sceneMain = new Scene(layoutMainMenu, 800, 600);
 
         this.setTitle("Main Menu");
         this.setScene(sceneMain);
