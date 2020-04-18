@@ -35,15 +35,23 @@ public class Timelines extends Stage {
             this.close();
         });
 
+        String[] stuff = TimelineInfo.borderControlDates();
+        String[] describe = TimelineInfo.borderControlStage();
+        TimelineGraphic test = new TimelineGraphic(stuff, describe);
         // Use Vbox to stack vertically.
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(title, btnBack);
-        vbox.setAlignment(Pos.TOP_LEFT);
+        vbox.getChildren().addAll(title, test.getTimeline(), btnBack);
         layoutIntro.setCenter(vbox);
+        final int spacing = 15;
+        final int inset = 15;
+        vbox.setSpacing(spacing);
+        vbox.setPadding(new Insets(inset, 0, 0, 0));
+        vbox.setAlignment(Pos.CENTER);
+
 
         // Create the scene.
         Scene sceneMain = new Scene(layoutIntro, 800, 600);
-        this.setTitle("Introduction");
+        this.setTitle("Border Control");
         this.setScene(sceneMain);
         this.setResizable(false);
         this.show();
@@ -69,11 +77,20 @@ public class Timelines extends Stage {
             this.close();
         });
 
+        String[] stuff = TimelineInfo.resourceAllocationDates();
+        String[] describe = TimelineInfo.resourceAllocation();
+        TimelineGraphic test = new TimelineGraphic(stuff, describe);
+
         // Use Vbox to stack vertically.
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(title, btnBack);
+        vbox.getChildren().addAll(title, test.getTimeline(), btnBack);
         vbox.setAlignment(Pos.TOP_LEFT);
         layoutIntro.setCenter(vbox);
+        final int spacing = 15;
+        final int inset = 15;
+        vbox.setSpacing(spacing);
+        vbox.setPadding(new Insets(inset, 0, 0, 0));
+        vbox.setAlignment(Pos.CENTER);
 
         // Create the scene.
         Scene sceneMain = new Scene(layoutIntro, 800, 600);
@@ -94,7 +111,7 @@ public class Timelines extends Stage {
         layoutIntro.setPadding(new Insets(10));
 
         title = new Label("Communications Timeline");
-
+        title.setFont(new Font("Arial", 20));
 
         // Back button
         btnBack = new Button("Back");
@@ -103,11 +120,20 @@ public class Timelines extends Stage {
             this.close();
         });
 
+        String[] stuff = TimelineInfo.communicationDates();
+        String[] describe = TimelineInfo.communicationsStage();
+        TimelineGraphic test = new TimelineGraphic(stuff, describe);
+
         // Use Vbox to stack vertically.
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(title, btnBack);
+        vbox.getChildren().addAll(title, test.getTimeline(), btnBack);
         vbox.setAlignment(Pos.TOP_LEFT);
         layoutIntro.setCenter(vbox);
+        final int spacing = 15;
+        final int inset = 15;
+        vbox.setSpacing(spacing);
+        vbox.setPadding(new Insets(inset, 0, 0, 0));
+        vbox.setAlignment(Pos.CENTER);
 
         // Create the scene.
         Scene sceneMain = new Scene(layoutIntro, 800, 600);

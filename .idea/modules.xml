@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/JavaHackathonFinal.iml" filepath="$PROJECT_DIR$/.idea/JavaHackathonFinal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChrisHackathon.iml" filepath="$PROJECT_DIR$/ChrisHackathon.iml" />
     </modules>
   </component>
 </project>
