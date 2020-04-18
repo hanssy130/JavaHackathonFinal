@@ -18,7 +18,7 @@ import java.util.Scanner;
  * @author Jason Lui (A00930386)
  * @version 2020
  */
-public class BouncingBalls extends Application {
+public class BouncingBalls extends Stage {
 
     public static final int MAX_X = 600; // horizontal edge of enclosing Panel
     public static final int MAX_Y = 600; // vertical edge of enclosing Panel
@@ -75,14 +75,13 @@ public class BouncingBalls extends Application {
 
     /**
      * Demonstrates threading in JavaFX.
-     * @param primaryStage contains the Scene
      */
-    public void start(Stage primaryStage) {
+    public void start() {
         Pane canvas = new Pane();
         Scene scene = new Scene(canvas, MAX_X, MAX_Y);
         System.out.println("Enter the number of balls: ");
         Scanner scanner = new Scanner(System.in);
-        int numberOfBalls = scanner.nextInt();
+        final int numberOfBalls = 20;
 
         for (int i = 0; i < numberOfBalls; i++) {
             Ball ball = new Ball(GENERATOR.nextInt(MAX_X), GENERATOR.nextInt(MAX_Y));
@@ -92,20 +91,10 @@ public class BouncingBalls extends Application {
             bouncer.start();
         }
 
-        primaryStage.setTitle("Threads and Balls");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        this.setTitle("Threads and Balls");
+        this.setScene(scene);
+        this.show();
     }
 
-    /**
-     * Launches the JavaFX application.  We still need a main method in our
-     * JavaFX applications.  The main method must do one thing.  Pass
-     * the command line arguments (args) to the launch method inherited from
-     * the Application class.
-     *
-     * @param args command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
-    }
+
 }

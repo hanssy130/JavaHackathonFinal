@@ -21,6 +21,12 @@ import javafx.stage.Stage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
+/**
+ * Stage of the Main menu.
+ *
+ * @author Hans Sy
+ * @version 2020
+ */
 public class MainMenu extends Stage {
 
     public void firstStage() {
@@ -37,7 +43,6 @@ public class MainMenu extends Stage {
         final int layoutPadding = 10;
         //Spacing from window border to actual layout is 10px every side.
         layoutMainMenu.setPadding(new Insets(layoutPadding));
-
 
         // Button to go to scene with buttons to time lines
         Button buttonIntroduction = new Button();
@@ -115,6 +120,4 @@ public class MainMenu extends Stage {
         this.setResizable(false);
         this.show();
     }
-
-
 }
