@@ -37,15 +37,15 @@ public class USA extends BouncingBalls {
         threadBalls();
     }
 
-    /**
-     * Launches the JavaFX application.  We still need a main method in our
-     * JavaFX applications.  The main method must do one thing.  Pass
-     * the command line arguments (args) to the launch method inherited from
-     * the Application class.
-     *
-     * @param args command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
-    }
+//    /**
+//     * Launches the JavaFX application.  We still need a main method in our
+//     * JavaFX applications.  The main method must do one thing.  Pass
+//     * the command line arguments (args) to the launch method inherited from
+//     * the Application class.
+//     *
+//     * @param args command line arguments
+//     */
+//    public static void main(String[] args) {
+//        launch(args);
+//    }
 }
