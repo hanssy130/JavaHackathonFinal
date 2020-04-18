@@ -14,7 +14,10 @@ import javafx.stage.Stage;
 /**
  * Holds the Menu to choose timelines.
  *
+ * @author Brian Duong
  * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class TimelineMenu extends Stage {

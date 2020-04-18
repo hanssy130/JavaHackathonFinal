@@ -6,7 +6,12 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.shape.Line;
 
 /**
- * @author Jason Lui (A00930386)
+ * USA.
+ *
+ * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class USA extends BouncingBalls {

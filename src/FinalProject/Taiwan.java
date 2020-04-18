@@ -8,7 +8,12 @@ import javafx.scene.shape.Line;
 import javafx.stage.Modality;
 
 /**
- * @author Jason Lui (A00930386)
+ * Taiwan.
+ *
+ * @author Brian Duong
+ * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class Taiwan extends BouncingBalls {

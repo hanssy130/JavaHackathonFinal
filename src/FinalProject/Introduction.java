@@ -14,7 +14,10 @@ import javafx.stage.Stage;
 /**
  * Features the stage of the Introduction.
  *
+ * @author Brian Duong
  * @author Hans Sy
+ * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class Introduction extends Stage {

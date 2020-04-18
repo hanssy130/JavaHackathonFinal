@@ -5,7 +5,10 @@ import javafx.scene.Group;
 /**
  * Makes a timeline with upto 5 items.
  *
+ * @author Brian Duong
+ * @author Hans Sy
  * @author Justin Majam
+ * @author Jason Lui
  * @version 2020
  */
 public class TimelineGraphic {
