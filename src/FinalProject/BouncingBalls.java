@@ -22,7 +22,7 @@ public class BouncingBalls extends Application {
 
     public static final int MAX_X = 600; // horizontal edge of enclosing Panel
     public static final int MAX_Y = 600; // vertical edge of enclosing Panel
-    private static final List<Ball> BALLS = new ArrayList<>();
+    private static final List<COVIDBall> COVID_BALLS = new ArrayList<>();
     private static final Random GENERATOR = new Random();
 
     /**
@@ -30,41 +30,44 @@ public class BouncingBalls extends Application {
      *
      * @return the list of balls
      */
-    public static List<Ball> getBalls() {
-        return BALLS;
+    public static List<COVIDBall> getCovidBalls() {
+        return COVID_BALLS;
     }
 
     /**
-     * Generate the uninfected population of balls and add them to BALLS and the canvas.
+     * Generate the uninfected population of balls and add them to COVID_BALLS and the canvas.
      *
      * @param canvas        Pane
      * @param numberOfBalls int
      */
-    private void generateUninfectedBalls(Pane canvas, int numberOfBalls) {
+    protected void generateUninfectedBalls(Pane canvas, int numberOfBalls,
+                                           int xMaxSpeed, int yMaxSpeed, int infectionDistance) {
         for (int i = 0; i < numberOfBalls; i++) {
-            Ball ball = new Ball(GENERATOR.nextInt(MAX_X), GENERATOR.nextInt(MAX_Y), false);
-            canvas.getChildren().add(ball);
-            BALLS.add(ball);
+            COVIDBall COVIDBall = new COVIDBall(GENERATOR.nextInt(MAX_X),
+                    GENERATOR.nextInt(MAX_Y), xMaxSpeed, yMaxSpeed, false, infectionDistance);
+            canvas.getChildren().add(COVIDBall);
+            COVID_BALLS.add(COVIDBall);
         }
     }
 
     /**
-     * Generate the infected ball and add it to BALLS and the canvas.
+     * Generate the infected ball and add it to COVID_BALLS and the canvas.
      *
      * @param canvas Pane
      */
-    private void generateInfectedBall(Pane canvas) {
-        Ball ball = new Ball(GENERATOR.nextInt(MAX_X), GENERATOR.nextInt(MAX_Y), true);
-        canvas.getChildren().add(ball);
-        BALLS.add(ball);
+    protected void generateInfectedBall(Pane canvas, int xMaxSpeed, int yMaxSpeed, int infectionDistance) {
+        COVIDBall COVIDBall = new COVIDBall(GENERATOR.nextInt(MAX_X),
+                GENERATOR.nextInt(MAX_Y), xMaxSpeed, yMaxSpeed, true, infectionDistance);
+        canvas.getChildren().add(COVIDBall);
+        COVID_BALLS.add(COVIDBall);
     }
 
     /**
      * Starts the threads for the balls
      */
-    private void threadBalls() {
-        for (Ball ball : BALLS) {
-            Thread bouncer = new Thread(ball);
+    protected void threadBalls() {
+        for (COVIDBall COVIDBall : COVID_BALLS) {
+            Thread bouncer = new Thread(COVIDBall);
             bouncer.setDaemon(true);
             bouncer.start();
         }
@@ -72,7 +75,6 @@ public class BouncingBalls extends Application {
 
     /**
      * Demonstrates threading in JavaFX.
-     *
      * @param primaryStage contains the Scene
      */
     public void start(Stage primaryStage) {
@@ -80,16 +82,19 @@ public class BouncingBalls extends Application {
         Scene scene = new Scene(canvas, MAX_X, MAX_Y);
         System.out.println("Enter the number of balls: ");
         Scanner scanner = new Scanner(System.in);
-
         int numberOfBalls = scanner.nextInt();
-        generateUninfectedBalls(canvas, numberOfBalls);
-        generateInfectedBall(canvas);
+
+        for (int i = 0; i < numberOfBalls; i++) {
+            Ball ball = new Ball(GENERATOR.nextInt(MAX_X), GENERATOR.nextInt(MAX_Y));
+            canvas.getChildren().add(ball);
+            Thread bouncer = new Thread(ball);
+            bouncer.setDaemon(true);
+            bouncer.start();
+        }
 
         primaryStage.setTitle("Threads and Balls");
         primaryStage.setScene(scene);
         primaryStage.show();
-
-        threadBalls();
     }
 
     /**
