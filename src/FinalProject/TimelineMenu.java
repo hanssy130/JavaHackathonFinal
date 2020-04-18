@@ -21,6 +21,12 @@ import javafx.scene.image.ImageView;
 import java.awt.*;
 import java.io.FileInputStream;
 
+/**
+ * Holds the Menu to choose timelines.
+ *
+ * @author Hans Sy
+ * @version 2020
+ */
 public class TimelineMenu extends Stage {
 
     // Button directs to Border Control, Travel, & Finding Cases timeline.
@@ -38,7 +44,9 @@ public class TimelineMenu extends Stage {
     private Label title;
     private Text information;
 
-
+    /**
+     * Stage for the Timeline Menu.
+     */
     public void timeLineStage() {
         // Introduction info
         title = new Label("Timeline of Events");
