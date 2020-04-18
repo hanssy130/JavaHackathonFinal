@@ -19,7 +19,8 @@ public class COVIDBall extends Ball {
     private static final int LOOP_SLEEP_DURATION = 10; // sleep time for the while run loop
     private static final int MINIMUM_TIME_TO_START_DYING = 7000; // time until a ball can die
     private static final int RECOVERY_TIME = 25000; // time until a ball is recovered
-    private static final int MILLISECONDS_PER_DAY = 1000; // number of milliseconds to represent a day
+    private static final int MILLISECONDS_PER_DAY = 1000;
+    // number of milliseconds to represent a day
     private static final double COVID_DEATH_RATE = 0.03; // death chance of COVID-19 per day
 
     private static final Paint INFECTED_COLOR = Color.rgb(150, 20, 20);
@@ -46,7 +47,8 @@ public class COVIDBall extends Ball {
      * @param infected          boolean
      * @param infectionDistance int
      */
-    public COVIDBall(int xPosition, int yPosition, int xMaxSpeed, int yMaxSpeed, boolean infected, int infectionDistance) {
+    public COVIDBall(int xPosition, int yPosition, int xMaxSpeed, int yMaxSpeed, boolean infected,
+                     int infectionDistance) {
         super(xPosition, yPosition);
         this.dx = xMaxSpeed * GENERATOR.nextDouble(); // change in x
         this.dy = yMaxSpeed * GENERATOR.nextDouble(); // change in y
@@ -69,7 +71,9 @@ public class COVIDBall extends Ball {
     }
 
     /**
-     * Attempts to infect another COVIDBall
+     * Attempts to infect another COVIDBall.
+     *
+     * @param contactedCOVIDBall a COVIDBall
      */
     private void infect(COVIDBall contactedCOVIDBall) {
         if (!contactedCOVIDBall.immune && contactedCOVIDBall.alive) {
@@ -160,7 +164,7 @@ public class COVIDBall extends Ball {
     }
 
     /**
-     * Kills a COVIDBall
+     * Kills a COVIDBall.
      */
     private void kill(COVIDBall COVIDBall) {
         COVIDBall.alive = false;
@@ -172,7 +176,7 @@ public class COVIDBall extends Ball {
     }
 
     /**
-     * Recovers a COVIDBall
+     * Recovers a COVIDBall.
      */
     private void recover(COVIDBall COVIDBall) {
         COVIDBall.infected = false;
