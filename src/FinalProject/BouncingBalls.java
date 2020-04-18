@@ -20,8 +20,8 @@ import java.util.Scanner;
  */
 public class BouncingBalls extends Application {
 
-    private static final int MAX_X = 500; // horizontal edge of enclosing Panel
-    private static final int MAX_Y = 500; // vertical edge of enclosing Panel
+    public static final int MAX_X = 600; // horizontal edge of enclosing Panel
+    public static final int MAX_Y = 600; // vertical edge of enclosing Panel
     private static final List<Ball> BALLS = new ArrayList<>();
     private static final Random GENERATOR = new Random();
 
@@ -77,7 +77,7 @@ public class BouncingBalls extends Application {
      */
     public void start(Stage primaryStage) {
         Pane canvas = new Pane();
-        Scene scene = new Scene(canvas, 500, 500);
+        Scene scene = new Scene(canvas, MAX_X, MAX_Y);
         System.out.println("Enter the number of balls: ");
         Scanner scanner = new Scanner(System.in);
 
