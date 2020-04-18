@@ -1,6 +1,6 @@
 package FinalProject;
 
-public class PictureEvent extends Event {
+public class PictureEvent extends TaiwanEvents {
 
     private String link;
 
