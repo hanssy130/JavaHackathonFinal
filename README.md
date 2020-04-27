@@ -3,6 +3,8 @@ In these unprecedented times, our instructors have decided to give us a HACKATHO
 
 # Project Name: Taiwan #1
 
+![TaiwanNumbaWan](https://i.imgur.com/RMjZTLh.png)
+
 During the epidemic of COVID-19, each country’s response has had dramatic impacts on how well they dealt with the crisis. Taiwan is one of the top performers, if not the best, in preventing the outbreak from getting out of hand, unlike the USA and Italy. Our idea is to create an informative JavaFX application that educates users on how Taiwan was able to accomplish such a feat.
 
 # Team 干嘛 (Gan Ma) Gang
